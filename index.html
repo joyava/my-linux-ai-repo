@@ -38,16 +38,50 @@
         </ul>
 
         <h2>Getting Started with AI on Ubuntu Linux</h2>
-        <p>To get started with AI development on Ubuntu Linux, follow these steps:</p>
+        <p>My journey begin here:</p>
         <ol>
-            <li>Install Ubuntu Linux on your system. You can download the latest version of Ubuntu from the official website and follow the installation instructions.</li>
+            <li>Google chrome browser. Download .deb file. cd to ~/Downloads then dpkg -i google-chromesomthing.deb </li>
             <li>Once Ubuntu is installed, update the system and install essential development tools using the terminal:</li>
             <pre><code>sudo apt update
 sudo apt upgrade
 sudo apt install build-essential</code></pre>
-            <li>Choose an AI framework or library to work with, such as TensorFlow, PyTorch, or scikit-learn.</li>
-            <li>Install the chosen AI framework or library and its dependencies using the terminal. For example, to install TensorFlow:</li>
-            <pre><code>pip install tensorflow</code></pre>
+            <li>I want to keep a backup copy of my work in another computer.</li>
+            <li>So, I install syncthing app</li>
+            <pre><code>sudo apt install syncthing
+sudo systemctl enable syncthing@joyava.service
+sudo systemctl start syncthing@joyava.service
+sudo systemctl status syncthing@joyava.service 
+on your browser type http://localhost:8384
+Click setting, click GUI tab, Enter your username and password. Click save. 
+repeat these steps on another ubuntu laptop2
+Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 
+How do you do that? Click action, click show ID, copy to google keep this ID 
+On Ubuntu laptop2:
+Copy ID code from google keep
+click "add remote device" at the bottom of the page
+You paste ID code into this pop up window. click save
+
+On Ubuntu laptop1:
+click "add device" on pop up message
+change device name to "laptop2". click save.
+Now you sit back and watch the "remote device" box
+When it shows "connected", you are done
+type ls on your terminal
+you should see a Sync folder along with Downloads and Pictures folder
+The default Sync folder is at ~/Sync
+The "default folder" entry on your browser shows /home/username/Sync
+click "edit" button, it popup a windows with 3 tabs
+click sharing tab, then tick the box
+click file_version tab, choose "simple file version. click save.
+
+On laptop2:
+click share button
+xxxxxxxxxxx
+Installing ollama.ai
+sudo apt install curl
+curl https://ollama.ai/install.sh | sh
+ollama run phi
+ollama run mistral </code></pre>
             <li>Start developing AI applications using your preferred programming language (e.g., Python) and the installed framework/library.</li>
         </ol>
 
