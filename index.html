@@ -24,7 +24,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Artificial Intelligence and Ubuntu Linux</h1>
+        <h1>AI and Ubuntu Linux</h1>
         <p>Artificial Intelligence (AI) is a rapidly growing field that involves the development of intelligent machines capable of performing tasks that typically require human intelligence. Ubuntu Linux, on the other hand, is a popular open-source operating system based on the Debian distribution of Linux.</p>
 
         <h2>Why use Ubuntu Linux for AI?</h2>
@@ -40,11 +40,12 @@
         <h2>Getting Started with AI on Ubuntu Linux</h2>
         <p>My journey begin here:</p>
         <ol>
-            <li>Google chrome browser. Download .deb file. cd to ~/Downloads then dpkg -i google-chromesomthing.deb </li>
+            <li>Download Rufus and Ubuntu.iso on Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
+            <li>Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 23.10 onto a second laptop</li>
             <li>Once Ubuntu is installed, update the system and install essential development tools using the terminal:</li>
+            <li>Download chrome browser in .deb format. cd to ~/Downloads then sudo dpkg -i google-chromesomthing.deb </li>
             <pre><code>sudo apt update
-sudo apt upgrade
-sudo apt install build-essential</code></pre>
+sudo apt upgrade</code></pre>
             <li>I want to keep a backup copy of my work in another computer.</li>
             <li>So, I install syncthing app</li>
             <pre><code>sudo apt install syncthing
@@ -53,7 +54,7 @@ sudo systemctl start syncthing@joyava.service
 sudo systemctl status syncthing@joyava.service 
 on your browser type http://localhost:8384
 Click setting, click GUI tab, Enter your username and password. Click save. 
-repeat these steps on another ubuntu laptop2
+repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5)
 Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 
 How do you do that? Click action, click show ID, copy to google keep this ID 
 On Ubuntu laptop2:
@@ -77,33 +78,39 @@ click file_version tab, choose "simple file version. click save.
 On laptop2:
 click share button
 xxxxxxxxxxx
-Certain questions I don't want to chat with ChatGPT because of privacy
-I want to chat with an ai locally on my old computer (ideapad3 i5-CPU)
+Sometimes, I don't want to chat with ChatGPT about private matter.
+I want to chat with an AI locally on my old computer (ideapad3 i5-CPU)
 
 Installing ollama.ai
 sudo apt install curl
 curl https://ollama.ai/install.sh | sh
-ollama run phi
 ollama run mistral 
-x x x  x x x
-I don't even know how to make this html webpage.
-So, I ask chatGPT to create this index webpage for me 
-Here is the query to chatGPT
-create a detail html script about ai and Ubuntu linux
-x x x  x x  x x
-I need somebody to host my website for free.
-This YouTuber (Cameron McKenzie) shows me how to create webpage or other files on github server
+#Now you can chat with this Ollama-AI bot.
+
+x x x  x x x x x x x x x x x x x x x x x x x
+Topic#2: How do I make this index.html file?
+
+I don't even know how to make this HTML webpage.
+So, I ask chatGPT to create this webpage for me 
+Here is the query to chatGPT:
+"create a detail html script about ai and Ubuntu linux"
+I then edit this script and write everything you read here
+
+x x x  x x  x x x x x  x x x x x x x x x x x x x x x 
+Topic#3: I need somebody to host my website for free.
+
+This YouTuber (Cameron McKenzie) shows me how to create webpage and other files on github server
 https://youtu.be/MaqVvXv6zrU?si=L0F8wPT2Z5R-zfWp
 So I am using "GitHub Desktop" app to publish this personal webpage for free. 
-To summarize this GitHub Desktop, you just put your files into a github folder on your local drive
+To summarize this GitHub Desktop app, you just put your files into a github folder on your local drive
 click commit. </code></pre>
-            <li>I tried to install LM Studio, but the installation failed because it needs a modern computer and maybe an Nvidia GPU. So from now on, you don't buy any computer that is on sale because most stores want to dump their pre-ai era computers. So they can restock with ai computers. You just wait for ai computer to come out. If need be, buy a computer with Nvidia GPU and 16 GB of RAM. Most ai models need 16, 32, or 64GB of RAM. </li>
+            <li>Before I installed Ollama AI, I really want to install LM Studio. But the installation failed because it needs a modern computer and maybe an Nvidia GPU. My Ubuntu laptop does not meet this requirement. So from now on, you don't buy any computer that is on sale because most stores want to dump their pre-ai era computers. So they can restock with ai computers. You just wait for ai computer to come out. If need be, buy a computer with Nvidia GPU and 16 GB of RAM. Most ai models need Nvidia GPU and 16, 32, or 64GB of RAM. </li>
         </ol>
 
         <h2>Conclusion</h2>
         <p>Ubuntu Linux provides a stable, secure, and flexible platform for AI development and deployment. Ubuntu Linux is an excellent choice for both beginners and experienced developers in the field of Artificial Intelligence.</p>
-        <p>One more thing. My Raspberry Pi 5 just arrived. I put the RPI5 in a Geekworm case model P573. When I turned it on, the wifi is super weak and unusable. I was about to return it back to canakit.com. Then, I remembered that canakit rep told me that they only sell official raspberry pi products. They don't sell third party accessories. I took the RPI5 out of the fanless metal case, and it works great! But, I put the RPI5 back into the fanless metal case again. I don't screw it tight like the last time. It also works! So maybe the last time, I screwed it too tight, and the metal case exerts pressure on the wifi chip which causes it to malfunction.</p>  
-        <p>Please excuse all my grammatical mistakes. I will fix it in the next update. I learn so much from people on the internet and YouTube. I want to contribute back. Just in case other websites or YouTube video disappeared, I still have this webpage to refer back to. 
+        <p>One more thing: My Raspberry Pi 5 just arrived. I put the RPI5 in a Geekworm case model P573. When I turned it on, the Wi-Fi is super weak and unusable. I was about to return it back to canakit.com. Then, I remembered that canakit rep told me that they only sell official raspberry pi products. They don't sell third party accessories. I took the RPI5 out of the fanless metal case, and it works great! I suspected maybe the metal case exerts too much pressure on the WiFi-chip. So, I put the RPI5 back into the fanless metal case again. I don't screw it tight like the last time. It works! So maybe the last time, I screw it too tight, and the metal case exerts pressure on the WiFi chip which causes it to malfunction.</p>  
+        <p>Please excuse all my grammatical mistakes. I will fix it in the next update. I learn so much from people on the internet and YouTube. I want to contribute back. Just in case other websites or YouTube videos disappear, I still have this webpage to refer back to. 
  </div>
 </body>
 </html>
