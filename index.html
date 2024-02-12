@@ -113,13 +113,11 @@ That is why I want to install LM Studio
 LM Studio requires any CPU that support AVX2
 I did a Google search and Google Generative AI give me this answer:
 
-==Intel has supported AVX2 since the Haswell (Core 4000 series) and AMD since Zen (Ryzen 1000 series)==.
-
 In general, CPUs with the commercial denomination “Core i3/i5/i7” support AVX2, whereas “Pentium” and “Celeron” CPUs don't
-
+xxxxxxxxxx
 To verify if your system supports the AVX2 instruction set, you can:
 - Run `cat /proc/cpuinfo |grep avx2` to see if avx2 (in lower case) is listed
-
+xxxxxxxxx
 My Ubuntu Linux return a lot of information, but the word "avx2" is highlighted in red color. Now, I am sure LM Studio will work on my computer.
 
 But, when I down load this file (LM_Studio-0.2.14-beta-1.AppImage), my computer give me this error:
@@ -127,27 +125,16 @@ Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such f
 What do I do now?  </p>
         <p> How to fix it? LM-Studio-Installation Error:
 1. Error: /usr/local/lib/libclblast.so.1:
-2. It is missing clblast package. 
+2. It means clblast package is missing. 
 
 xxxxxxxxxxxxx
 joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
-11:51:02.214 › Got GPU Type: intel
+
 11:51:02.214 › LM Studio: gpu type = Intel
 A JavaScript error occurred in the main process
 Uncaught Exception:
 Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
-    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
-    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
-    at Object.func [as .node] (node:electron/js2c/asar_bundle:2:1822)
-    at Module.load (node:internal/modules/cjs/loader:1096:32)
-    at Module._load (node:internal/modules/cjs/loader:937:12)
-    at f._load (node:electron/js2c/asar_bundle:2:13330)
-    at Module.require (node:internal/modules/cjs/loader:1120:19)
-    at require (node:internal/modules/cjs/helpers:103:18)
-    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
-    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
-
+    
 x x x x x x x  x x x x x 
 How to install clblast ?
 LM Studio allows you to chat with it locally (off-line)
@@ -156,12 +143,6 @@ LM Studio requires any CPU that support AVX2
 
 joyu@p3:~$ conda install -c conda-forge clblast
 Retrieving notices: ...working... done
-Channels:
- - conda-forge
- - defaults
-Platform: linux-64
-Collecting package metadata (repodata.json): done
-Solving environment: done
 
 ## Package Plan ##
 
@@ -180,15 +161,9 @@ The following packages will be downloaded:
     libgcc-ng-13.2.0           |       h807b86a_5         752 KB  conda-forge
     libgomp-13.2.0             |       h807b86a_5         410 KB  conda-forge
     ocl-icd-2.3.1              |       h7f98852_0         119 KB  conda-forge
-    openssl-3.2.1              |  joyu@p3:/usr/lib$ conda list clblast
+
+joyu@p3:/usr/lib$ conda list clblast
 # packages in environment at /home/joyu/miniconda3:
-#
-# Name                    Version                   Build  Channel
-clblast                   1.5.2                h4bd325d_0    conda-forge
-     hd590300_0         2.7 MB  conda-forge
-    python_abi-3.11            |          2_cp311           5 KB  conda-forge
-    ------------------------------------------------------------
-                                           Total:         8.8 MB
 
 The following NEW packages will be INSTALLED:
 
@@ -234,11 +209,8 @@ python3.11
 
 X X X X X X 
 
-joyu@p3:/usr/lib$ conda list clblast
+joyu@p3:/usr/local/lib$ conda list clblast
 # packages in environment at /home/joyu/miniconda3:
-#
-# Name                    Version                   Build  Channel
-clblast                   1.5.2                h4bd325d_0    conda-forge
 
 x x x x  x x x
 Where is libclblast.so.1 located?
@@ -248,11 +220,11 @@ libclblast.so.1 is located in /home/joyu/miniconda3/lib
 (I need to do a sym-link for LM Studio to work)
 (LM-Studio want libcllast to be at /usr/local/lib/  )
 
-Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+Error: /usr/local/lib/libclblast.so.1: No such file or directory
 
 libclblast.so.1 is a folder (not an executable file)
 
-X X X X  X X X 
+X X X X How To Do Sym-link?
 ln -s /tmp/reference-directory symlink-directory
 cd /usr/local/lib/
 sudo ln -s ~/miniconda3/lib/libclblast.so.1  /usr/local/lib/libclblast.so.1
@@ -302,7 +274,7 @@ You will replace authorization with "Bearer not-needed"
 It works! 
 I created a page inside Obsidian and asked Text Generator a answer
 Absolutely, I am very happy with the answer generated. 
-Everything is working! So Happy!  </p>  
+Everything is working! So Happy! Sorry about this messy webpage because I don't know how to code a website. </p>  
  </div>
 </body>
 </html>
