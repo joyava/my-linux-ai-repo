@@ -107,10 +107,239 @@ click commit. </code></pre>
             <li>Before I installed Ollama AI, I really want to install LM Studio. But the installation failed because it needs a modern computer and maybe an Nvidia GPU. My Ubuntu laptop does not meet this requirement. So from now on, you don't buy any computer that is on sale because most stores want to dump their pre-ai era computers. So they can restock with ai computers. You just wait for ai computer to come out. If need be, buy a computer with Nvidia GPU and 16 GB of RAM. Most ai models need Nvidia GPU and 16, 32, or 64GB of RAM. </li>
         </ol>
 
-        <h2>Conclusion</h2>
-        <p>Ubuntu Linux provides a stable, secure, and flexible platform for AI development and deployment. Ubuntu Linux is an excellent choice for both beginners and experienced developers in the field of Artificial Intelligence.</p>
-        <p>One more thing: My Raspberry Pi 5 just arrived. I put the RPI5 in a Geekworm case model P573. When I turned it on, the Wi-Fi is super weak and unusable. I was about to return it back to canakit.com. Then, I remembered that canakit rep told me that they only sell official raspberry pi products. They don't sell third party accessories. I took the RPI5 out of the fanless metal case, and it works great! I suspected maybe the metal case exerts too much pressure on the WiFi-chip. So, I put the RPI5 back into the fanless metal case again. I don't screw it tight like the last time. It works! So maybe the last time, I screw it too tight, and the metal case exerts pressure on the WiFi chip which causes it to malfunction.</p>  
-        <p>Please excuse all my grammatical mistakes. I will fix it in the next update. I learn so much from people on the internet and YouTube. I want to contribute back. Just in case other websites or YouTube videos disappear, I still have this webpage to refer back to. 
+        <h2> How To Install LM Studio without error: </h2>
+        <p> Requirement: LM Studio allows you to chat with it locally (off-line)
+That is why I want to install LM Studio
+LM Studio requires any CPU that support AVX2
+I did a Google search and Google Generative AI give me this answer:
+
+==Intel has supported AVX2 since the Haswell (Core 4000 series) and AMD since Zen (Ryzen 1000 series)==.
+
+In general, CPUs with the commercial denomination “Core i3/i5/i7” support AVX2, whereas “Pentium” and “Celeron” CPUs don't
+
+To verify if your system supports the AVX2 instruction set, you can:
+- Run `cat /proc/cpuinfo |grep avx2` to see if avx2 (in lower case) is listed
+
+My Ubuntu Linux return a lot of information, but the word "avx2" is highlighted in red color. Now, I am sure LM Studio will work on my computer.
+
+But, when I down load this file (LM_Studio-0.2.14-beta-1.AppImage), my computer give me this error:
+Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+What do I do now?  </p>
+        <p> How to fix it? LM-Studio-Installation Error:
+1. Error: /usr/local/lib/libclblast.so.1:
+2. It is missing clblast package. 
+Ubuntu Linux provides a stable, secure, and flexible platform for AI development and deployment. Ubuntu Linux is an excellent choice for both beginners and experienced developers in the field of Artificial Intelligence.
+
+joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
+11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
+11:51:02.214 › Got GPU Type: intel
+11:51:02.214 › LM Studio: gpu type = Intel
+A JavaScript error occurred in the main process
+Uncaught Exception:
+Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
+    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
+    at Object.func [as .node] (node:electron/js2c/asar_bundle:2:1822)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:937:12)
+    at f._load (node:electron/js2c/asar_bundle:2:13330)
+    at Module.require (node:internal/modules/cjs/loader:1120:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
+    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
+
+x x x x x x x  x x x x x 
+How to install clblast ?
+LM Studio allows you to chat with it locally (off-line)
+That is why I want to install LM Studio
+LM Studio requires any CPU that support AVX2
+joyu@p3:~$ conda install -c conda-forge clblast
+Retrieving notices: ...working... done
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/joyu/miniconda3
+
+  added / updated specs:
+    - clblast
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |      conda_forge           3 KB  conda-forge
+    _openmp_mutex-4.5          |            2_gnu          23 KB  conda-forge
+    ca-certificates-2024.2.2   |       hbcca054_0         152 KB  conda-forge
+    certifi-2024.2.2           |     pyhd8ed1ab_0         157 KB  conda-forge
+    clblast-1.5.2              |       h4bd325d_0         3.3 MB  conda-forge
+    conda-23.11.0              |  py311h38be061_1         1.2 MB  conda-forge
+    libgcc-ng-13.2.0           |       h807b86a_5         752 KB  conda-forge
+    libgomp-13.2.0             |       h807b86a_5         410 KB  conda-forge
+    ocl-icd-2.3.1              |       h7f98852_0         119 KB  conda-forge
+    openssl-3.2.1              |  joyu@p3:/usr/lib$ conda list clblast
+# packages in environment at /home/joyu/miniconda3:
+#
+# Name                    Version                   Build  Channel
+clblast                   1.5.2                h4bd325d_0    conda-forge
+     hd590300_0         2.7 MB  conda-forge
+    python_abi-3.11            |          2_cp311           5 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         8.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  clblast            conda-forge/linux-64::clblast-1.5.2-h4bd325d_0 
+  ocl-icd            conda-forge/linux-64::ocl-icd-2.3.1-h7f98852_0 
+  python_abi         conda-forge/linux-64::python_abi-3.11-2_cp311 
+
+The following packages will be UPDATED:
+
+  ca-certificates    pkgs/main::ca-certificates-2023.12.12~ --> conda-forge::ca-certificates-2024.2.2-hbcca054_0 
+  certifi            pkgs/main/linux-64::certifi-2023.11.1~ --> conda-forge/noarch::certifi-2024.2.2-pyhd8ed1ab_0 
+  conda              pkgs/main::conda-23.11.0-py311h06a430~ --> conda-forge::conda-23.11.0-py311h38be061_1 
+  libgcc-ng          pkgs/main::libgcc-ng-11.2.0-h1234567_1 --> conda-forge::libgcc-ng-13.2.0-h807b86a_5 
+  libgomp              pkgs/main::libgomp-11.2.0-h1234567_1 --> conda-forge::libgomp-13.2.0-h807b86a_5 
+  openssl              pkgs/main::openssl-3.0.12-h7f8727e_0 --> conda-forge::openssl-3.2.1-hd590300_0 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge 
+  _openmp_mutex          pkgs/main::_openmp_mutex-5.1-1_gnu --> conda-forge::_openmp_mutex-4.5-2_gnu 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                                                       
+Preparing transaction: done                                                                                                            
+Verifying transaction: done                                                                                                            
+Executing transaction:joyu@p3:~/Downloads$                                                                                                             
+joyu@p3:~$ cd Downloads
+joyu@p3:~/Downloads$ ls                                                                                                                
+Miniconda3-latest-Linux-x86_64.sh     LM_Studio-0.2.14-beta-1.AppImage                                             
+X X X X X X X X X  X X
+joyu@p3:~/Downloads$ chmod u+x LM_Studio-0.2.14-beta-1.AppImage
+
+joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
+
+11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
+11:51:02.214 › Got GPU Type: intel
+11:51:02.214 › LM Studio: gpu type = Intel
+A JavaScript error occurred in the main process
+Uncaught Exception:
+Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
+    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
+    at Object.func [as .node] (node:elejoyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
+11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
+11:51:02.214 › Got GPU Type: intel
+11:51:02.214 › LM Studio: gpu type = Intel
+A JavaScript error occurred in the main process
+Uncaught Exception:
+Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
+    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
+    at Object.func [as .node] (node:electron/js2c/asar_bundle:2:1822)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:937:12)
+    at f._load (node:electron/js2c/asar_bundle:2:13330)
+    at Module.require (node:internal/modules/cjs/loader:1120:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
+    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
+ctron/js2c/asar_bundle:2:1822)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:937:12)
+    at f._load (node:electron/js2c/asar_bundle:2:13330)
+    at Module.require (node:internal/modules/cjs/loader:1120:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
+    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
+
+joyu@p3:~/Downloads$ cd /usr/local/lib/
+joyu@p3:/usr/local/lib$ ls
+python3.11
+(This /usr/local/lib folder is missing libclblast.so.1)
+
+X X X X X X 
+
+joyu@p3:/usr/lib$ conda list clblast
+# packages in environment at /home/joyu/miniconda3:
+#
+# Name                    Version                   Build  Channel
+clblast                   1.5.2                h4bd325d_0    conda-forge
+
+x x x x  x x x
+Where is libclblast.so.1 located?
+my username is joyu
+libclblast.so.1 is located in /home/joyu/miniconda3/lib
+
+(I need to do a sym-link for LM Studio to work)
+(LM-Studio want libcllast to be at /usr/local/lib/  )
+
+Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+
+libclblast.so.1 is a folder (not an executable file)
+
+X X X X  X X X 
+ln -s /tmp/reference-directory symlink-directory
+cd /usr/local/lib/
+sudo ln -s ~/miniconda3/lib/libclblast.so.1  /usr/local/lib/libclblast.so.1
+
+joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
+Error: /usr/local/lib/libclblast.so: No such file or directory
+This is a folder: /usr/local/lib/libclblast.so
+(LM-studio wants another folder)
+
+sudo ln -s ~/miniconda3/lib/libclblast.so  /usr/local/lib/libclblast.so
+
+x x x x x x x x
+It works! I'm so happy!
+LM Studio window pop up for you to chat with it.
+LM Studio allows you to chat with it locally (off-line)
+That is why I want to install LM Studio
+ 
+ xxxxxxxxxxx
+ 
+ I don't see a LM-studio icon on my desktop.
+ How the heck am I going to start LM-Studio again?
+ 
+ LM-studio keeps all the "downloaded models" into this directory:
+ /home/joyu/.cache/lm-studio/models
+ (it is hidden inside a .cache folder)
+
+x x xx x x x x x x 
+ Now I install Obsidian via the Ubuntu Software Center.
+ I want Obsidian to be a client and LM-Studio to be the server
+ I want to chat with LM-Studio within the Obsidian app
+ How do I do that?
+ 
+ Follow this YouTuber's instruction
+ 1. Setup Obsidian AI With LM Studio 
+ 2. https://youtu.be/zS9FTikQg5c?si=R6-Q5LdC9k8p3k6V
+ 
+ In Obsidian, goto setting, install text generator
+ Under community pluggins, select text generator
+ Here is the orginal header:
+ {
+    "Content-Type": "application/json",
+    authorization: "Bearer {{api_key}}"
+}
+You will replace authorization with "Bearer not-needed"
+(He said to change to context size to 4090. I use default value)
+
+It works! 
+I created a page inside Obsidian and asked Text Generator a answer
+Absolutely, I am very happy with the answer generated. 
+Everything is working! So Happy!  </p>  
  </div>
 </body>
 </html>
