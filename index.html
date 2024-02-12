@@ -128,8 +128,8 @@ What do I do now?  </p>
         <p> How to fix it? LM-Studio-Installation Error:
 1. Error: /usr/local/lib/libclblast.so.1:
 2. It is missing clblast package. 
-Ubuntu Linux provides a stable, secure, and flexible platform for AI development and deployment. Ubuntu Linux is an excellent choice for both beginners and experienced developers in the field of Artificial Intelligence.
 
+xxxxxxxxxxxxx
 joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
 11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
 11:51:02.214 › Got GPU Type: intel
@@ -153,6 +153,7 @@ How to install clblast ?
 LM Studio allows you to chat with it locally (off-line)
 That is why I want to install LM Studio
 LM Studio requires any CPU that support AVX2
+
 joyu@p3:~$ conda install -c conda-forge clblast
 Retrieving notices: ...working... done
 Channels:
@@ -174,10 +175,6 @@ The following packages will be downloaded:
 
     package                    |            build
     ---------------------------|-----------------
-    _libgcc_mutex-0.1          |      conda_forge           3 KB  conda-forge
-    _openmp_mutex-4.5          |            2_gnu          23 KB  conda-forge
-    ca-certificates-2024.2.2   |       hbcca054_0         152 KB  conda-forge
-    certifi-2024.2.2           |     pyhd8ed1ab_0         157 KB  conda-forge
     clblast-1.5.2              |       h4bd325d_0         3.3 MB  conda-forge
     conda-23.11.0              |  py311h38be061_1         1.2 MB  conda-forge
     libgcc-ng-13.2.0           |       h807b86a_5         752 KB  conda-forge
@@ -199,15 +196,6 @@ The following NEW packages will be INSTALLED:
   ocl-icd            conda-forge/linux-64::ocl-icd-2.3.1-h7f98852_0 
   python_abi         conda-forge/linux-64::python_abi-3.11-2_cp311 
 
-The following packages will be UPDATED:
-
-  ca-certificates    pkgs/main::ca-certificates-2023.12.12~ --> conda-forge::ca-certificates-2024.2.2-hbcca054_0 
-  certifi            pkgs/main/linux-64::certifi-2023.11.1~ --> conda-forge/noarch::certifi-2024.2.2-pyhd8ed1ab_0 
-  conda              pkgs/main::conda-23.11.0-py311h06a430~ --> conda-forge::conda-23.11.0-py311h38be061_1 
-  libgcc-ng          pkgs/main::libgcc-ng-11.2.0-h1234567_1 --> conda-forge::libgcc-ng-13.2.0-h807b86a_5 
-  libgomp              pkgs/main::libgomp-11.2.0-h1234567_1 --> conda-forge::libgomp-13.2.0-h807b86a_5 
-  openssl              pkgs/main::openssl-3.0.12-h7f8727e_0 --> conda-forge::openssl-3.2.1-hd590300_0 
-
 The following packages will be SUPERSEDED by a higher-priority channel:
 
   _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge 
@@ -220,50 +208,25 @@ Proceed ([y]/n)? y
 Downloading and Extracting Packages:
                                                                                                                                        
 Preparing transaction: done                                                                                                            
-Verifying transaction: done                                                                                                            
-Executing transaction:joyu@p3:~/Downloads$                                                                                                             
+Verifying transaction: done   
+xxxxxxxxxxxxxxxxxxxxxxx
+                                                                                                                                                                                                                    
 joyu@p3:~$ cd Downloads
 joyu@p3:~/Downloads$ ls                                                                                                                
 Miniconda3-latest-Linux-x86_64.sh     LM_Studio-0.2.14-beta-1.AppImage                                             
 X X X X X X X X X  X X
 joyu@p3:~/Downloads$ chmod u+x LM_Studio-0.2.14-beta-1.AppImage
-
+xxxxxxxxxxx
 joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-
-11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
-11:51:02.214 › Got GPU Type: intel
-11:51:02.214 › LM Studio: gpu type = Intel
+xxxxxxxxxxx
 A JavaScript error occurred in the main process
 Uncaught Exception:
 Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
-    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
-    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
-    at Object.func [as .node] (node:elejoyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-11:51:02.204 › GPU info: '00:02.0 VGA compatible controller: Intel Corporation Iris Plus Graphics G1 (Ice Lake) (rev 07)'              
-11:51:02.214 › Got GPU Type: intel
-11:51:02.214 › LM Studio: gpu type = Intel
+   
 A JavaScript error occurred in the main process
 Uncaught Exception:
 Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
-    at process.func [as dlopen] (node:electron/js2c/asar_bundle:2:1822)
-    at Module._extensions..node (node:internal/modules/cjs/loader:1326:18)
-    at Object.func [as .node] (node:electron/js2c/asar_bundle:2:1822)
-    at Module.load (node:internal/modules/cjs/loader:1096:32)
-    at Module._load (node:internal/modules/cjs/loader:937:12)
-    at f._load (node:electron/js2c/asar_bundle:2:13330)
-    at Module.require (node:internal/modules/cjs/loader:1120:19)
-    at require (node:internal/modules/cjs/helpers:103:18)
-    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
-    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
-ctron/js2c/asar_bundle:2:1822)
-    at Module.load (node:internal/modules/cjs/loader:1096:32)
-    at Module._load (node:internal/modules/cjs/loader:937:12)
-    at f._load (node:electron/js2c/asar_bundle:2:13330)
-    at Module.require (node:internal/modules/cjs/loader:1120:19)
-    at require (node:internal/modules/cjs/helpers:103:18)
-    at 6829 (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:2:2058)
-    at r (/tmp/.mount_LM_StuUA3s3R/resources/app/.webpack/main/index.js:8:401969)
-
+xxxxxxxxxx    
 joyu@p3:~/Downloads$ cd /usr/local/lib/
 joyu@p3:/usr/local/lib$ ls
 python3.11
@@ -293,12 +256,12 @@ X X X X  X X X
 ln -s /tmp/reference-directory symlink-directory
 cd /usr/local/lib/
 sudo ln -s ~/miniconda3/lib/libclblast.so.1  /usr/local/lib/libclblast.so.1
-
+xxxxxxxxxxxxx
 joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
 Error: /usr/local/lib/libclblast.so: No such file or directory
 This is a folder: /usr/local/lib/libclblast.so
 (LM-studio wants another folder)
-
+xxxxxxxxxxxx
 sudo ln -s ~/miniconda3/lib/libclblast.so  /usr/local/lib/libclblast.so
 
 x x x x x x x x
