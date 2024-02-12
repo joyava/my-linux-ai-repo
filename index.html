@@ -121,7 +121,7 @@ xxxxxxxxx
 My Ubuntu Linux return a lot of information, but the word "avx2" is highlighted in red color. Now, I am sure LM Studio will work on my computer.
 
 But, when I down load this file (LM_Studio-0.2.14-beta-1.AppImage), my computer give me this error:
-Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+Error: /usr/local/lib/libclblast.so.1: No such file or directory
 What do I do now?  </p>
         <p> How to fix it? LM-Studio-Installation Error:
 1. Error: /usr/local/lib/libclblast.so.1:
@@ -140,7 +140,7 @@ How to install clblast ?
 LM Studio allows you to chat with it locally (off-line)
 That is why I want to install LM Studio
 LM Studio requires any CPU that support AVX2
-
+xxxxxxxxxxx
 joyu@p3:~$ conda install -c conda-forge clblast
 Retrieving notices: ...working... done
 
@@ -150,39 +150,18 @@ Retrieving notices: ...working... done
 
   added / updated specs:
     - clblast
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    clblast-1.5.2              |       h4bd325d_0         3.3 MB  conda-forge
-    conda-23.11.0              |  py311h38be061_1         1.2 MB  conda-forge
-    libgcc-ng-13.2.0           |       h807b86a_5         752 KB  conda-forge
-    libgomp-13.2.0             |       h807b86a_5         410 KB  conda-forge
-    ocl-icd-2.3.1              |       h7f98852_0         119 KB  conda-forge
-
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 joyu@p3:/usr/lib$ conda list clblast
 # packages in environment at /home/joyu/miniconda3:
 
 The following NEW packages will be INSTALLED:
 
   clblast            conda-forge/linux-64::clblast-1.5.2-h4bd325d_0 
-  ocl-icd            conda-forge/linux-64::ocl-icd-2.3.1-h7f98852_0 
-  python_abi         conda-forge/linux-64::python_abi-3.11-2_cp311 
-
-The following packages will be SUPERSEDED by a higher-priority channel:
-
-  _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge 
-  _openmp_mutex          pkgs/main::_openmp_mutex-5.1-1_gnu --> conda-forge::_openmp_mutex-4.5-2_gnu 
-
 
 Proceed ([y]/n)? y
 
-
 Downloading and Extracting Packages:
-                                                                                                                                       
-Preparing transaction: done                                                                                                            
+                                                                                                                                                                                                                                                   
 Verifying transaction: done   
 xxxxxxxxxxxxxxxxxxxxxxx
                                                                                                                                                                                                                     
@@ -196,11 +175,11 @@ joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
 xxxxxxxxxxx
 A JavaScript error occurred in the main process
 Uncaught Exception:
-Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+Error: /usr/local/lib/libclblast.so.1: No such file or directory
    
 A JavaScript error occurred in the main process
 Uncaught Exception:
-Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
+Error: /usr/local/lib/libclblast.so.1: No such file or directory
 xxxxxxxxxx    
 joyu@p3:~/Downloads$ cd /usr/local/lib/
 joyu@p3:/usr/local/lib$ ls
@@ -222,8 +201,6 @@ libclblast.so.1 is located in /home/joyu/miniconda3/lib
 
 Error: /usr/local/lib/libclblast.so.1: No such file or directory
 
-libclblast.so.1 is a folder (not an executable file)
-
 X X X X How To Do Sym-link?
 ln -s /tmp/reference-directory symlink-directory
 cd /usr/local/lib/
@@ -232,10 +209,12 @@ xxxxxxxxxxxxx
 joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
 Error: /usr/local/lib/libclblast.so: No such file or directory
 This is a folder: /usr/local/lib/libclblast.so
-(LM-studio wants another folder)
+(LM-studio wants another folder. You do another sym-link)
 xxxxxxxxxxxx
 sudo ln -s ~/miniconda3/lib/libclblast.so  /usr/local/lib/libclblast.so
-
+xxxxxxxxxxx
+joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
+xxxxxxxxxxx
 x x x x x x x x
 It works! I'm so happy!
 LM Studio window pop up for you to chat with it.
