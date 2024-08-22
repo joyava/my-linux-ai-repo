@@ -1,259 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI and Ubuntu Linux</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+<html>
+   <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My Linux Journey</title>
 </head>
-<body>
-    <div class="container">
-        <h1>AI and Ubuntu Linux</h1>
-        <p>Artificial Intelligence (AI) is a rapidly growing field that involves the development of intelligent machines capable of performing tasks that typically require human intelligence. Ubuntu Linux, on the other hand, is a popular open-source operating system based on the Debian distribution of Linux.</p>
+   <body>
+    <h1>What can Linux do?</h1> 
+    <hr>
+    <h2>Let's install a Linux distro</h2>
+ <ul>
+    <li>Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
+    <li>Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 24.04 onto a second laptop.</li>
+    <li>Once Ubuntu is installed, update the system and install whatever you need.</li>
+    <li>Search for Google Chrome Browser. Download 64 bit .deb (For Debian/Ubuntu).</li> 
+    <li>cd to ~/Downloads then sudo dpkg -i google-chromesomething.deb </li>
+ <pre><code>
+        sudo apt update
+        sudo apt upgrade -y
+        cd ~/Downloads
+        sudo dpkg -i google-chromewhatever.deb
+</code></pre>
+</ul>
+    <hr>
+    <h2>Let's install syncthing application</h2>
+    <p>I want to keep a backup copy of my work in another computer. This is where syncthing come in.</p>
+<pre><code>
+    sudo apt install syncthing
+    sudo systemctl enable syncthing@joyava.service
+    sudo systemctl start syncthing@joyava.service
+    sudo systemctl status syncthing@joyava.service 
+</code></pre>
+<ul>
+<li>On your browser type http://localhost:8384 </li>
+<li>Click setting, click GUI tab, Enter your username and password. Click save. </li>
+<li>Repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5) </li>
+<li>Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 </li>
+<li>How do you do that? Click action, click show ID, copy to google keep this ID </li>
+<li>On Ubuntu laptop2:</li>
+<li>Copy ID code from google keep</li>
+<li>click "add remote device" at the bottom of the page</li>
+<li>You paste ID code into this pop up window. click save.</li> 
+<li>On Ubuntu laptop1:</li>
+<li>click "add device" on pop up message</li>
+<li>change device name to "laptop2". click save.</li>
+<li>Now you sit back and watch the "remote device" box</li>
+<li>When it shows "connected", you are done</li>
+<li>type ls on your terminal</li>
+<li>you should see a Sync folder along with Downloads and Pictures folder</li>
+<li>The default Sync folder is at ~/Sync </li>
+<li>The "default folder" entry on your browser shows /home/username/Sync </li>
+<li>click "edit" button, it popup a windows with 3 tabs </li>
+<li>click sharing tab, then tick the box </li>
+<li>click file_version tab, choose "simple file version. click save.</li>
+<li>On Ubuntu laptop2:</li>
+<li>click share button</li>
+</ul>
 
-        <h2>Why use Ubuntu Linux for AI?</h2>
-        <p>Ubuntu Linux is a preferred choice for AI development and deployment for several reasons:</p>
-        <ul>
-            <li><strong>Open Source:</strong> Ubuntu is open-source, which means its source code is freely available, allowing developers to modify and customize it according to their needs.</li>
-            <li><strong>Community Support:</strong> Ubuntu has a large and active community of developers and users who provide support, contribute to development, and share knowledge.</li>
-            <li><strong>Stability and Security:</strong> Ubuntu is known for its stability and security, making it a reliable platform for AI development and deployment.</li>
-            <li><strong>Compatibility:</strong> Ubuntu is compatible with a wide range of AI frameworks, libraries, and tools, making it easy to set up and use for AI development.</li>
-            <li><strong>Containerization:</strong> Ubuntu supports containerization technologies like Docker and Kubernetes, which are essential for deploying AI applications in production environments.</li>
-        </ul>
+    <hr>
+    <h2>Let's install Ollama AI application</h2>
+    <p>Sometimes, I don't want to chat online with ChatGPT about private matter. I want to chat offline with a local ai.</p>
+<pre><code>
+    sudo apt install curl
+    curl https://ollama.ai/install.sh | sh
+    ollama run phi3
+</code></pre>
+    <hr>
+    <h2>How do I make this web page?</h2>
+    <p><a href="https://youtu.be/PlxWf493en4?si=iW2-F3VfryIaIyr0" target="_blank">I learned from this tutorial video.</a> </p>
 
-        <h2>Getting Started with AI on Ubuntu Linux</h2>
-        <p>My journey begin here:</p>
-        <ol>
-            <li>Download Rufus and Ubuntu.iso on Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
-            <li>Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 23.10 onto a second laptop</li>
-            <li>Once Ubuntu is installed, update the system and install essential development tools using the terminal:</li>
-            <li>Download chrome browser in .deb format. cd to ~/Downloads then sudo dpkg -i google-chromesomthing.deb </li>
-            <pre><code>sudo apt update
-sudo apt upgrade</code></pre>
-            <li>I want to keep a backup copy of my work in another computer.</li>
-            <li>So, I install syncthing app</li>
-            <pre><code>sudo apt install syncthing
-sudo systemctl enable syncthing@joyava.service
-sudo systemctl start syncthing@joyava.service
-sudo systemctl status syncthing@joyava.service 
-on your browser type http://localhost:8384
-Click setting, click GUI tab, Enter your username and password. Click save. 
-repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5)
-Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 
-How do you do that? Click action, click show ID, copy to google keep this ID 
-On Ubuntu laptop2:
-Copy ID code from google keep
-click "add remote device" at the bottom of the page
-You paste ID code into this pop up window. click save
+    <hr>
+    <h2>I need someone to host this webpage for free</h2>
+    <p><a href="https://youtu.be/MaqVvXv6zrU?si=L0F8wPT2Z5R-zfWp" target="_blank">I learned from this YouTuber.</a> </p>
+    <hr>
+    <h2>How to install .AppImage application?</h2>
+    <p>LM Studio is another application that allows you to chat offline.</p>
+<ul>
+    <li>Search for LM Studio on your browser. </li>
+    <li>Download LM_Studio-whatever.AppImage </li>
+</ul>
+<pre><code>
+    sudo apt install libfuse2
+    chmod +x LM_Studio-whatever.AppImage
+    ./LM_Studio-whatever.AppImage
+</code></pre>
 
-On Ubuntu laptop1:
-click "add device" on pop up message
-change device name to "laptop2". click save.
-Now you sit back and watch the "remote device" box
-When it shows "connected", you are done
-type ls on your terminal
-you should see a Sync folder along with Downloads and Pictures folder
-The default Sync folder is at ~/Sync
-The "default folder" entry on your browser shows /home/username/Sync
-click "edit" button, it popup a windows with 3 tabs
-click sharing tab, then tick the box
-click file_version tab, choose "simple file version. click save.
+<hr>
 
-On laptop2:
-click share button
-xxxxxxxxxxx
-Sometimes, I don't want to chat with ChatGPT about private matter.
-I want to chat with an AI locally on my old computer (ideapad3 i5-CPU)
-
-Installing ollama.ai
-sudo apt install curl
-curl https://ollama.ai/install.sh | sh
-ollama run mistral 
-#Now you can chat with this Ollama-AI bot.
-
-x x x  x x x x x x x x x x x x x x x x x x x
-Topic#2: How do I make this index.html file?
-
-I don't even know how to make this HTML webpage.
-So, I ask chatGPT to create this webpage for me 
-Here is the query to chatGPT:
-"create a detail html script about ai and Ubuntu linux"
-I then edit this script and write everything you read here
-
-x x x  x x  x x x x x  x x x x x x x x x x x x x x x 
-Topic#3: I need somebody to host my website for free.
-
-This YouTuber (Cameron McKenzie) shows me how to create webpage and other files on github server
-https://youtu.be/MaqVvXv6zrU?si=L0F8wPT2Z5R-zfWp
-So I am using "GitHub Desktop" app to publish this personal webpage for free. 
-To summarize this GitHub Desktop app, you just put your files into a github folder on your local drive
-click commit. </code></pre>
-            <li>Before I installed Ollama AI, I really want to install LM Studio. But the installation failed because it needs a modern computer and maybe an Nvidia GPU. My Ubuntu laptop does not meet this requirement. So from now on, you don't buy any computer that is on sale because most stores want to dump their pre-ai era computers. So they can restock with ai computers. You just wait for ai computer to come out. If need be, buy a computer with Nvidia GPU and 16 GB of RAM. Most ai models need Nvidia GPU and 16, 32, or 64GB of RAM. </li>
-        </ol>
-
-        <h2> How To Install LM Studio without error: </h2>
-        <p> Requirement: LM Studio allows you to chat with it locally (off-line)
-That is why I want to install LM Studio
-LM Studio requires any CPU that support AVX2
-I did a Google search and Google Generative AI give me this answer:
-
-In general, CPUs with the commercial denomination “Core i3/i5/i7” support AVX2, whereas “Pentium” and “Celeron” CPUs don't
-xxxxxxxxxx
-To verify if your system supports the AVX2 instruction set, you can:
-- Run `cat /proc/cpuinfo |grep avx2` to see if avx2 (in lower case) is listed
-xxxxxxxxx
-My Ubuntu Linux return a lot of information, but the word "avx2" is highlighted in red color. Now, I am sure LM Studio will work on my computer.
-
-But, when I down load this file (LM_Studio-0.2.14-beta-1.AppImage), my computer give me this error:
-Error: /usr/local/lib/libclblast.so.1: No such file or directory
-What do I do now?  </p>
-        <p> How to fix it? LM-Studio-Installation Error:
-1. Error: /usr/local/lib/libclblast.so.1:
-2. It means clblast package is missing. 
-
-xxxxxxxxxxxxx
-joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-
-11:51:02.214 › LM Studio: gpu type = Intel
-A JavaScript error occurred in the main process
-Uncaught Exception:
-Error: /usr/local/lib/libclblast.so.1: cannot open shared object file: No such file or directory
-    
-x x x x x x x  x x x x x 
-How to install clblast ?
-LM Studio allows you to chat with it locally (off-line)
-That is why I want to install LM Studio
-LM Studio requires any CPU that support AVX2
-xxxxxxxxxxx
-joyu@p3:~$ conda install -c conda-forge clblast
-Retrieving notices: ...working... done
-
-## Package Plan ##
-
-  environment location: /home/joyu/miniconda3
-
-  added / updated specs:
-    - clblast
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-joyu@p3:/usr/lib$ conda list clblast
-# packages in environment at /home/joyu/miniconda3:
-
-The following NEW packages will be INSTALLED:
-
-  clblast            conda-forge/linux-64::clblast-1.5.2-h4bd325d_0 
-
-Proceed ([y]/n)? y
-
-Downloading and Extracting Packages:
-                                                                                                                                                                                                                                                   
-Verifying transaction: done   
-xxxxxxxxxxxxxxxxxxxxxxx
-                                                                                                                                                                                                                    
-joyu@p3:~$ cd Downloads
-joyu@p3:~/Downloads$ ls                                                                                                                
-Miniconda3-latest-Linux-x86_64.sh     LM_Studio-0.2.14-beta-1.AppImage                                             
-X X X X X X X X X  X X
-joyu@p3:~/Downloads$ chmod u+x LM_Studio-0.2.14-beta-1.AppImage
-xxxxxxxxxxx
-joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-xxxxxxxxxxx
-A JavaScript error occurred in the main process
-Uncaught Exception:
-Error: /usr/local/lib/libclblast.so.1: No such file or directory
-   
-A JavaScript error occurred in the main process
-Uncaught Exception:
-Error: /usr/local/lib/libclblast.so.1: No such file or directory
-xxxxxxxxxx    
-joyu@p3:~/Downloads$ cd /usr/local/lib/
-joyu@p3:/usr/local/lib$ ls
-python3.11
-(This /usr/local/lib folder is missing libclblast.so.1)
-
-X X X X X X 
-
-joyu@p3:/usr/local/lib$ conda list clblast
-# packages in environment at /home/joyu/miniconda3:
-
-x x x x  x x x
-Where is libclblast.so.1 located?
-my username is joyu
-libclblast.so.1 is located in /home/joyu/miniconda3/lib
-
-(I need to do a sym-link for LM Studio to work)
-(LM-Studio want libcllast to be at /usr/local/lib/  )
-
-Error: /usr/local/lib/libclblast.so.1: No such file or directory
-
-X X X X How To Do Sym-link?
-ln -s /tmp/reference-directory symlink-directory
-cd /usr/local/lib/
-sudo ln -s ~/miniconda3/lib/libclblast.so.1  /usr/local/lib/libclblast.so.1
-xxxxxxxxxxxxx
-joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-Error: /usr/local/lib/libclblast.so: No such file or directory
-This is a folder: /usr/local/lib/libclblast.so
-(LM-studio wants another folder. You do another sym-link)
-xxxxxxxxxxxx
-sudo ln -s ~/miniconda3/lib/libclblast.so  /usr/local/lib/libclblast.so
-xxxxxxxxxxx
-joyu@p3:~/Downloads$ ./LM_Studio-0.2.14-beta-1.AppImage
-xxxxxxxxxxx
-x x x x x x x x
-It works! I'm so happy!
-LM Studio window pop up for you to chat with it.
-LM Studio allows you to chat with it locally (off-line)
-That is why I want to install LM Studio
- 
- xxxxxxxxxxx
- 
- I don't see a LM-studio icon on my desktop.
- How the heck am I going to start LM-Studio again?
- 
- LM-studio keeps all the "downloaded models" into this directory:
- /home/joyu/.cache/lm-studio/models
- (it is hidden inside a .cache folder)
-
-x x xx x x x x x x 
- Now I install Obsidian via the Ubuntu Software Center.
- I want Obsidian to be a client and LM-Studio to be the server
- I want to chat with LM-Studio within the Obsidian app
- How do I do that?
- 
- Follow this YouTuber's instruction
- 1. Setup Obsidian AI With LM Studio 
- 2. https://youtu.be/zS9FTikQg5c?si=R6-Q5LdC9k8p3k6V
- 
- In Obsidian, goto setting, install text generator
- Under community pluggins, select text generator
- Here is the orginal header:
- {
-    "Content-Type": "application/json",
-    authorization: "Bearer {{api_key}}"
-}
-You will replace authorization with "Bearer not-needed"
-(He said to change to context size to 4090. I use default value)
-
-It works! 
-I created a page inside Obsidian and asked Text Generator a answer
-Absolutely, I am very happy with the answer generated. 
-Everything is working! So Happy! Sorry about this messy webpage because I don't know how to code a website. </p>  
- </div>
-</body>
+   </body>
 </html>
