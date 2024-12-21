@@ -1,91 +1,183 @@
 <!DOCTYPE html>
-<html>
-   <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>My Linux Journey</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .entry {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .entry h2 {
+            margin: 0 0 10px;
+        }
+        .entry a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .entry a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-   <body>
-    <h1>What can Linux do?</h1> 
-    <hr>
-    <h2>Let's install a Linux distro</h2>
- <ul>
-    <li>Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
-    <li>Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 24.04 onto a second laptop.</li>
-    <li>Once Ubuntu is installed, update the system and install whatever you need.</li>
-    <li>Search for Google Chrome Browser. Download 64 bit .deb (For Debian/Ubuntu).</li> 
-    <li>cd to ~/Downloads then sudo dpkg -i google-chromesomething.deb </li>
- <pre><code>
-        sudo apt update
-        sudo apt upgrade -y
-        cd ~/Downloads
-        sudo dpkg -i google-chromewhatever.deb
-</code></pre>
-</ul>
-    <hr>
-    <h2>Let's install syncthing application</h2>
-    <p>I want to keep a backup copy of my work in another computer. This is where syncthing come in.</p>
-<pre><code>
+<body>
+
+    <h1>Welcome to my blog</h1>
+
+    <div class="entry">
+        <h2>Install distro & browser</h2>
+        <a href="https://example.com/link1" target="_blank">Dead Link</a>
+        <p>Let's install a Linux distro and Chrome browser
+
+    Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.
+    Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 24.04 onto a second laptop.
+    Once Ubuntu is installed, update the system and install whatever you need.
+    Search for Google Chrome Browser. Download 64 bit .deb (For Debian/Ubuntu).
+    cd to ~/Downloads then sudo dpkg -i google-chromesomething.deb
+
+
+            sudo apt update
+            sudo apt upgrade -y
+            cd ~/Downloads
+            sudo dpkg -i google-chromewhatever.deb
+
+</p>
+    </div>
+
+    <div class="entry">
+        <h2>Install Syncthing</h2>
+        <a href="https://example.com/link2" target="_blank">Dead Link</a>
+        <p>I want to keep a backup copy of my work in another computer. This is where syncthing come in.
+
+
     sudo apt install syncthing
     sudo systemctl enable syncthing@joyava.service
     sudo systemctl start syncthing@joyava.service
     sudo systemctl status syncthing@joyava.service 
-</code></pre>
-<ul>
-<li>On your browser type http://localhost:8384 </li>
-<li>Click setting, click GUI tab, Enter your username and password. Click save. </li>
-<li>Repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5) </li>
-<li>Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 </li>
-<li>How do you do that? Click action, click show ID, copy to google keep this ID </li>
-<li>On Ubuntu laptop2:</li>
-<li>Copy ID code from google keep</li>
-<li>click "add remote device" at the bottom of the page</li>
-<li>You paste ID code into this pop up window. click save.</li> 
-<li>On Ubuntu laptop1:</li>
-<li>click "add device" on pop up message</li>
-<li>change device name to "laptop2". click save.</li>
-<li>Now you sit back and watch the "remote device" box</li>
-<li>When it shows "connected", you are done</li>
-<li>type ls on your terminal</li>
-<li>you should see a Sync folder along with Downloads and Pictures folder</li>
-<li>The default Sync folder is at ~/Sync </li>
-<li>The "default folder" entry on your browser shows /home/username/Sync </li>
-<li>click "edit" button, it popup a windows with 3 tabs </li>
-<li>click sharing tab, then tick the box </li>
-<li>click file_version tab, choose "simple file version. click save.</li>
-<li>On Ubuntu laptop2:</li>
-<li>click share button</li>
-</ul>
 
-    <hr>
-    <h2>Let's install Ollama AI application</h2>
-    <p>Sometimes, I don't want to chat online with ChatGPT about private matter. I want to chat offline with a local ai.</p>
-<pre><code>
+    On your browser type http://localhost:8384
+    Click setting, click GUI tab, Enter your username and password. Click save.
+    Repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5)
+    Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2
+    How do you do that? Click action, click show ID, copy to google keep this ID
+    On Ubuntu laptop2:
+    Copy ID code from google keep
+    click "add remote device" at the bottom of the page
+    You paste ID code into this pop up window. click save.
+    On Ubuntu laptop1:
+    click "add device" on pop up message
+    change device name to "laptop2". click save.
+    Now you sit back and watch the "remote device" box
+    When it shows "connected", you are done
+    type ls on your terminal
+    you should see a Sync folder along with Downloads and Pictures folder
+    The default Sync folder is at ~/Sync
+    The "default folder" entry on your browser shows /home/username/Sync
+    click "edit" button, it popup a windows with 3 tabs
+    click sharing tab, then tick the box
+    click file_version tab, choose "simple file version. click save.
+    On Ubuntu laptop2:
+    click share button
+</p>
+    </div>
+
+<div class="entry">
+        <h2>Install Ollama AI app</h2>
+        <a href="https://example.com/link2" target="_blank">Dead Link</a>
+        <p>Sometimes, I don't want to chat online with ChatGPT about private matter. I want to chat offline with a local ai.
+
+
     sudo apt install curl
     curl https://ollama.ai/install.sh | sh
     ollama run phi3
-</code></pre>
-    <hr>
-    <h2>How do I make this web page?</h2>
-    <p><a href="https://youtu.be/PlxWf493en4?si=iW2-F3VfryIaIyr0" target="_blank">I learned from this tutorial video.</a> </p>
+</p>
+    </div>
 
-    <hr>
-    <h2>I need someone to host this webpage for free</h2>
-    <p><a href="https://youtu.be/MaqVvXv6zrU?si=L0F8wPT2Z5R-zfWp" target="_blank">I learned from this YouTuber.</a> </p>
-    <hr>
-    <h2>How to install .AppImage application?</h2>
-    <p>LM Studio is another application that allows you to chat offline.</p>
-<ul>
-    <li>Search for LM Studio on your browser. </li>
-    <li>Download LM_Studio-whatever.AppImage </li>
-</ul>
-<pre><code>
+<div class="entry">
+        <h2>How to host this webpage for free?</h2>
+        <a href="https://youtu.be/MaqVvXv6zrU?si=SCTTmLKSJeGsNAy0" target="_blank">Visit YouTube Video</a>
+        <p>Description for the second entry goes here. It provides additional details about the topic.</p>
+    </div>
+
+<div class="entry">
+        <h2>How to install appimage for Ubuntu?</h2>
+        <a href="https://example.com/link2" target="_blank">Dead Link</a>
+        <p>LM Studio is another application that allows you to chat offline.
+
+    Search for LM Studio on your browser.
+    Download LM_Studio-or-whatever.AppImage
+
+
+    For Linux Mint or Ubuntu 22.04
     sudo apt install libfuse2
-    chmod +x LM_Studio-whatever.AppImage
-    ./LM_Studio-whatever.AppImage
-</code></pre>
+    chmod +x LM_Studio-or-whatever.AppImage
+    ./LM_Studio-or-whatever.AppImage
+    For Ubuntu 24.04
+    https://itsfoss.com/cant-run-appimage-ubuntu/
+    sudo apt install libfuse2t64
+    Ubuntu 24.04 (maybe even earlier version) inhibits you from installing file.appimage
+    https://github.com/electron/electron/issues/42510
+    You need to deactivate appimage restriction imposed by Ubuntu
+    sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+    Now you can install and run appimage files
+    chmod +x LM_Studio-or-whatever.AppImage
+    ./LM_Studio-or-whatever.AppImage
+</p>
+    </div>
 
-<hr>
 
-   </body>
+<div class="entry">
+        <h2>How to install appimage on Steam Deck?</h2>
+        <a href="https://github.com/ivan-hc/VirtualBox-appimage" target="_blank">Visit GitHub</a>
+        <p>I don't know how to do it officially. So I use this unofficial VB.</p>
+    </div>
+
+<div class="entry">
+        <h2>How to send a notification in Ubuntu?</h2>
+        <a href="https://youtu.be/WOmrWDwIkH0?si=zBbQWj5AmphFbWt7" target="_blank">Visit YouTube Video</a>
+        <p>Here's my solution:
+
+
+#!/bin/bash
+# cronjob does not has ability to run graphical notification script
+# instead, you put this script in ubuntu startup application
+
+while true; do
+# Pop up a notification on Ubuntu window  
+eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
+/usr/bin/notify-send "NOTIFICATION" "It is time to take a break!" -u critical -i mail-message-new 
+
+# Activate a voice notification at a specific interval
+vlc --play-and-exit /home/joy/Downloads/reminder1.wav
+
+sleep 3600   # 3600 seconds = 60 min
+
+done
+    
+</p>
+    </div>
+
+<div class="entry">
+        <h2>Title 2</h2>
+        <a href="https://example.com/link2" target="_blank">Visit Link</a>
+        <p>Description for the second entry goes here. It provides additional details about the topic.</p>
+    </div>
+
+
+    <div class="entry">
+        <h2>Title 3</h2>
+        <a href="https://example.com/link3" target="_blank">Visit Link</a>
+        <p>Description for the third entry goes here. It gives an introduction to the subject matter.</p>
+    </div>
+
+</body>
 </html>
