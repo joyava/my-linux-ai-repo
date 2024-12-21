@@ -168,17 +168,91 @@ done
 
 <div class="entry">
         <h2>Install LocalSend app via software center/manager</h2>
-        <a href="https://news.itsfoss.com/localsend/" target="_blank">Visit Link</a>
+        <a href="https://news.itsfoss.com/localsend/" target="_blank">Visit itsfoss.com </a>
         <p>Using LocalSend to wirelessly transfer files over Wi-Fi from smartphone to Linux-powered laptop. </p>
     </div>
     
 <div class="entry">
-        <h2>Title 2</h2>
-        <a href="https://example.com/link2" target="_blank">Visit Link</a>
-        <p>Description for the second entry goes here. It provides additional details about the topic.</p>
+        <h2>How to create a desktop icon from appimage? </h2>
+        <a href="https://example.com/link2" target="_blank">Dead Link</a>
+        <p>.\To link an AppImage in Linux to an icon, create a ".desktop" file that specifies the path to the AppImage executable and the location of your desired icon, essentially registering it as a desktop application with a custom icon; you'll need to place this ".desktop" file in your user's application directory, usually located at ~/.local/share/applications. [1, 2, 3]  
+Key steps: [1, 2, 4]  
+
+• Download the icon: Obtain the image file you want to use as the icon. [1, 2, 4]  
+• Create a .desktop file: [1, 2, 3]  
+	• Open a text editor and create a new file with a name that matches your AppImage (e.g., "appname.desktop"). [1, 2, 3]  
+	• Add the following content to the file, replacing placeholders with your AppImage path and icon location: 
+
+
+
+    [Desktop Entry]
+
+    Name=AppName
+
+    Comment=Description of the application
+
+    Exec=/path/to/your/appimage.AppImage %U
+
+    Icon=/path/to/your/icon.png
+
+    Type=Application
+
+    Categories=Application; 
+
+
+• Explanation: [1, 2, 3]  
+	• Name: The name of the application that will appear in the menu. [1, 2, 3]  
+	• Comment: A brief description. [2, 3]  
+	• Exec: The command to run the AppImage. [1, 2, 3]  
+	• Icon: The path to the icon image. [1, 2, 3]  
+	• Type: Indicates it's an application. [1, 2, 3]  
+	• Categories:  Where the application should appear in the menu. [2, 3]  
+
+
+• Place the .desktop file: [1, 2, 3]  
+• Save the ".desktop" file in the ~/.local/share/applications directory. [1, 2, 3]  
+
+Example: [1, 2, 4]  
+
+• AppImage file: /home/user/Downloads/myApp.AppImage 
+• Icon file: /home/user/Pictures/myAppIcon.png [1, 2, 3, 4]  
+
+Desktop file content: 
+[Desktop Entry]
+
+Name=MyApp
+
+Comment=My Application
+
+Exec=/home/user/Downloads/myApp.AppImage %U
+
+Icon=/home/user/Pictures/myAppIcon.png
+
+Type=Application
+
+Categories=Application;
+
+
+Important Considerations: [1, 4, 5]  
+
+• Permissions: Ensure your AppImage file is executable by running chmod +x /path/to/your/appimage.AppImage. [1, 4, 5]  
+• Icon location: If you want to use a system-wide icon, you can place the icon in a system-wide icon directory like /usr/share/icons. [1, 2, 3]  
+• AppImage Launcher: Some users prefer to use the AppImage Launcher which can automatically generate desktop entries and manage icons for AppImages. [4, 6]  
+
+
+Generative AI is experimental.
+
+[1] https://dev.to/tqbit/how-to-register-an-appimage-as-a-desktop-application-in-linux-31c7[2] https://acreom.com/docs/add-appimage-icon[3] https://ostechnix.com/create-desktop-entries-for-appimages-with-desktop-file-install/[4] https://itsfoss.com/use-appimage-linux/[5] https://retiolus.net/posts/how-to-register-appimage-destop-application-linux/[6] https://forums.linuxmint.com/viewtopic.php?t=424499
+</p>
     </div>
 
+ <div class="entry">
+        <h2>Title 2</h2>
+        <a href="https://example.com/link3" target="_blank">Visit Link</a>
+        <p>Description for the third entry goes here. It gives an introduction to the subject matter.</p>
+    </div>
 
+    
     <div class="entry">
         <h2>Title 3</h2>
         <a href="https://example.com/link3" target="_blank">Visit Link</a>
