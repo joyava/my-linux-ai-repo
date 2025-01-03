@@ -31,92 +31,98 @@
 </head>
 <body>
 
-    <h1>Welcome to my blog</h1>
+    <h1>Welcome To My Tech Blog</h1>
 
     <div class="entry">
         <h2>Install distro & browser</h2>
-        <a href="https://example.com/link1" target="_blank">Dead Link</a>
-        <p>Let's install a Linux distro and Chrome browser
-
-    Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.
-    Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 24.04 onto a second laptop.
-    Once Ubuntu is installed, update the system and install whatever you need.
-    Search for Google Chrome Browser. Download 64 bit .deb (For Debian/Ubuntu).
-    cd to ~/Downloads then sudo dpkg -i google-chromesomething.deb
-
-
-            sudo apt update
-            sudo apt upgrade -y
-            cd ~/Downloads
-            sudo dpkg -i google-chromewhatever.deb
+        
+ <ul>
+    <li>Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
+    <li>Plug in USB into another computer. Turn on. Press F12. Installing Ubuntu 24.04 onto a second laptop.</li>
+    <li>Once Ubuntu is installed, update the system and install whatever you need.</li>
+    <li>Search for Google Chrome Browser. Download 64 bit .deb (For Debian/Ubuntu).</li> 
+    <li>cd to ~/Downloads then sudo dpkg -i google-chromesomething.deb </li>
+ <pre><code>
+        sudo apt update
+        sudo apt upgrade -y
+        cd ~/Downloads
+        sudo dpkg -i google-chromewhatever.deb
+</code></pre>
+</ul>
 
 </p>
     </div>
 
     <div class="entry">
-        <h2>Install Syncthing</h2>
-        <a href="https://example.com/link2" target="_blank">Dead Link</a>
-        <p>I want to keep a backup copy of my work in another computer. This is where syncthing come in.
 
-
+    <h2>Let's install syncthing application</h2>
+    <p>I want to keep a backup copy of my work in another computer. This is where syncthing come in.</p>
+<pre><code>
     sudo apt install syncthing
     sudo systemctl enable syncthing@joyava.service
     sudo systemctl start syncthing@joyava.service
     sudo systemctl status syncthing@joyava.service 
+</code></pre>
+<ul>
+<li>On your browser type http://localhost:8384 </li>
+<li>Click setting, click GUI tab, Enter your username and password. Click save. </li>
+<li>Repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5) </li>
+<li>Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2 </li>
+<li>How do you do that? Click action, click show ID, copy to google keep this ID </li>
+<li>On Ubuntu laptop2:</li>
+<li>Copy ID code from google keep</li>
+<li>click "add remote device" at the bottom of the page</li>
+<li>You paste ID code into this pop up window. click save.</li> 
+<li>On Ubuntu laptop1:</li>
+<li>click "add device" on pop up message</li>
+<li>change device name to "laptop2". click save.</li>
+<li>Now you sit back and watch the "remote device" box</li>
+<li>When it shows "connected", you are done</li>
+<li>type ls on your terminal</li>
+<li>you should see a Sync folder along with Downloads and Pictures folder</li>
+<li>The default Sync folder is at ~/Sync </li>
+<li>The "default folder" entry on your browser shows /home/username/Sync </li>
+<li>click "edit" button, it popup a windows with 3 tabs </li>
+<li>click sharing tab, then tick the box </li>
+<li>click file_version tab, choose "simple file version. click save.</li>
+<li>On Ubuntu laptop2:</li>
+<li>click share button</li>
+</ul>
 
-    On your browser type http://localhost:8384
-    Click setting, click GUI tab, Enter your username and password. Click save.
-    Repeat these steps on another ubuntu laptop2 (I have Ubuntu on a Raspberry Pi5)
-    Get ID from Ubuntu laptop1 and Enter that ID into Ubuntu laptop2
-    How do you do that? Click action, click show ID, copy to google keep this ID
-    On Ubuntu laptop2:
-    Copy ID code from google keep
-    click "add remote device" at the bottom of the page
-    You paste ID code into this pop up window. click save.
-    On Ubuntu laptop1:
-    click "add device" on pop up message
-    change device name to "laptop2". click save.
-    Now you sit back and watch the "remote device" box
-    When it shows "connected", you are done
-    type ls on your terminal
-    you should see a Sync folder along with Downloads and Pictures folder
-    The default Sync folder is at ~/Sync
-    The "default folder" entry on your browser shows /home/username/Sync
-    click "edit" button, it popup a windows with 3 tabs
-    click sharing tab, then tick the box
-    click file_version tab, choose "simple file version. click save.
-    On Ubuntu laptop2:
-    click share button
+   
 </p>
     </div>
 
 <div class="entry">
-        <h2>Install Ollama AI app</h2>
-        <a href="https://example.com/link2" target="_blank">Dead Link</a>
-        <p>Sometimes, I don't want to chat online with ChatGPT about private matter. I want to chat offline with a local ai.
+        
+<p>
+    <h2>Let's install Ollama AI application</h2>
+    <p>Sometimes, I don't want to chat online with ChatGPT about private matter. I want to chat offline with a local ai.</p>
 
-
+<pre><code>
     sudo apt install curl
     curl https://ollama.ai/install.sh | sh
     ollama run phi3
+</code></pre>
+
 </p>
     </div>
 
 <div class="entry">
         <h2>How to host this webpage for free?</h2>
         <a href="https://youtu.be/MaqVvXv6zrU?si=SCTTmLKSJeGsNAy0" target="_blank">Visit YouTube Video</a>
-        <p>GitHub is really nice that it will host your webpage for free.</p>
+        <p>Description for the second entry goes here. It provides additional details about the topic.</p>
     </div>
 
 <div class="entry">
-        <h2>How to install LM-studio.appimage on Ubuntu?</h2>
-        <a href="https://example.com/link2" target="_blank">Dead Link</a>
-        <p>LM Studio is another application that allows you to chat offline.
-
-    Search for LM Studio on your browser.
-    Download LM_Studio-or-whatever.AppImage
-
-
+        <h2>How to install appimage for Ubuntu?</h2>
+       
+    <p>LM Studio is another application that allows you to chat offline.</p>
+<ul>
+    <li>Search for LM Studio on your browser. </li>
+    <li>Download LM_Studio-or-whatever.AppImage </li>
+</ul>
+<pre><code>
     For Linux Mint or Ubuntu 22.04
     sudo apt install libfuse2
     chmod +x LM_Studio-or-whatever.AppImage
@@ -131,22 +137,25 @@
     Now you can install and run appimage files
     chmod +x LM_Studio-or-whatever.AppImage
     ./LM_Studio-or-whatever.AppImage
+</code></pre>
+
+
 </p>
     </div>
 
 
 <div class="entry">
-        <h2>How to install VirtualBox.appimage on Steam Deck?</h2>
+        <h2>How to install appimage on Steam Deck?</h2>
         <a href="https://github.com/ivan-hc/VirtualBox-appimage" target="_blank">Visit GitHub</a>
-        <p>I don't know how to do install an official VirtualBox on Steam Deck. So I use this unofficial VirtualBox.appimage.</p>
+        <p>I don't know how to do it officially. So I use this unofficial VB.</p>
     </div>
 
 <div class="entry">
-        <h2>How to send a notification to Ubuntu?</h2>
+        <h2>How to send a notification in Ubuntu?</h2>
         <a href="https://youtu.be/WOmrWDwIkH0?si=zBbQWj5AmphFbWt7" target="_blank">Visit YouTube Video</a>
         <p>Here's my solution:
 
-
+<pre><code>
 #!/bin/bash
 # cronjob does not has ability to run graphical notification script
 # instead, you put this script in ubuntu startup application
@@ -157,102 +166,44 @@ eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome
 /usr/bin/notify-send "NOTIFICATION" "It is time to take a break!" -u critical -i mail-message-new 
 
 # Activate a voice notification at a specific interval
-vlc --play-and-exit /home/joy/Downloads/reminder1.wav
+vlc --play-and-exit ~/Downloads/reminder1.wav
 
 sleep 3600   # 3600 seconds = 60 min
 
 done
+</code></pre>
     
 </p>
     </div>
 
 <div class="entry">
-        <h2>Install LocalSend app via software center/manager</h2>
-        <a href="https://news.itsfoss.com/localsend/" target="_blank">Visit itsfoss.com </a>
+        <h2>Install LocalSend app</h2>
+        <a href="https://news.itsfoss.com/localsend/" target="_blank">Visit Link</a>
         <p>Using LocalSend to wirelessly transfer files over Wi-Fi from smartphone to Linux-powered laptop. </p>
     </div>
-    
+
 <div class="entry">
-        <h2>How to create a desktop icon from appimage? </h2>
-        <a href="https://example.com/link2" target="_blank">Dead Link</a>
-        <p>To link an AppImage in Linux to an icon, create a ".desktop" file that specifies the path to the AppImage executable and the location of your desired icon, essentially registering it as a desktop application with a custom icon; you'll need to place this ".desktop" file in your user's application directory, usually located at ~/.local/share/applications. [1, 2, 3]  
-Key steps: [1, 2, 4]  
+        <h2>How to fix date & time problem in Linux Mint</h2>
+        <p>I got help from ChatGPT
+    <pre><code>
+    Check and sync with NTC server
+    sudo apt install ntpdate
+    sudo ntpdate pool.ntp.org
+    I installed Fake-hwclock from the appstore
+    If all fail, we manually run command line
+    sudo date --set="Thu Jan 12 11:30:46"
+    </code></pre>
 
-• Download the icon: Obtain the image file you want to use as the icon. [1, 2, 4]  
-• Create a .desktop file: [1, 2, 3]  
-	• Open a text editor and create a new file with a name that matches your AppImage (e.g., "appname.desktop"). [1, 2, 3]  
-	• Add the following content to the file, replacing placeholders with your AppImage path and icon location: 
-
-
-
-    [Desktop Entry]
-
-    Name=AppName
-
-    Comment=Description of the application
-
-    Exec=/path/to/your/appimage.AppImage %U
-
-    Icon=/path/to/your/icon.png
-
-    Type=Application
-
-    Categories=Application; 
-
-
-• Explanation: [1, 2, 3]  
-	• Name: The name of the application that will appear in the menu. [1, 2, 3]  
-	• Comment: A brief description. [2, 3]  
-	• Exec: The command to run the AppImage. [1, 2, 3]  
-	• Icon: The path to the icon image. [1, 2, 3]  
-	• Type: Indicates it's an application. [1, 2, 3]  
-	• Categories:  Where the application should appear in the menu. [2, 3]  
-
-
-• Place the .desktop file: [1, 2, 3]  
-• Save the ".desktop" file in the ~/.local/share/applications directory. [1, 2, 3]  
-
-Example: [1, 2, 4]  
-
-• AppImage file: /home/user/Downloads/myApp.AppImage 
-• Icon file: /home/user/Pictures/myAppIcon.png [1, 2, 3, 4]  
-
-Desktop file content: 
-[Desktop Entry]
-
-Name=MyApp
-
-Comment=My Application
-
-Exec=/home/user/Downloads/myApp.AppImage %U
-
-Icon=/home/user/Pictures/myAppIcon.png
-
-Type=Application
-
-Categories=Application;
-
-
-Important Considerations: [1, 4, 5]  
-
-• Permissions: Ensure your AppImage file is executable by running chmod +x /path/to/your/appimage.AppImage. [1, 4, 5]  
-• Icon location: If you want to use a system-wide icon, you can place the icon in a system-wide icon directory like /usr/share/icons. [1, 2, 3]  
-• AppImage Launcher: Some users prefer to use the AppImage Launcher which can automatically generate desktop entries and manage icons for AppImages. [4, 6]  
-
-
-Generative AI is experimental.
-
-[1] https://dev.to/tqbit/how-to-register-an-appimage-as-a-desktop-application-in-linux-31c7[2] https://acreom.com/docs/add-appimage-icon[3] https://ostechnix.com/create-desktop-entries-for-appimages-with-desktop-file-install/[4] https://itsfoss.com/use-appimage-linux/[5] https://retiolus.net/posts/how-to-register-appimage-destop-application-linux/[6] https://forums.linuxmint.com/viewtopic.php?t=424499
 </p>
     </div>
 
  <div class="entry">
-        <h2>Title 2</h2>
-        <a href="https://example.com/link3" target="_blank">Visit Link</a>
-        <p>Description for the third entry goes here. It gives an introduction to the subject matter.</p>
+        <h2>Installing Windows 95 theme on Linux Mint XFCE desktop</h2>
+        <a href="https://youtu.be/j5UeSj2F-yc?si=VgfVDe2rgDgRW5Zt" target="_blank">Visit YouTube</a>
+        <p>I specifically looking for linux distro with xfce desktop so I could have Windows95 theme.</p>
     </div>
 
-    
+
     <div class="entry">
         <h2>Title 3</h2>
         <a href="https://example.com/link3" target="_blank">Visit Link</a>
