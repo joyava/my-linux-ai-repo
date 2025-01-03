@@ -109,9 +109,11 @@
     </div>
 
 <div class="entry">
-        <h2>How to host this webpage for free?</h2>
+        <h2>How to host this webpage on github for free?</h2>
         <a href="https://youtu.be/MaqVvXv6zrU?si=SCTTmLKSJeGsNAy0" target="_blank">Visit YouTube Video</a>
-        <p>Description for the second entry goes here. It provides additional details about the topic.</p>
+        <p>Sometimes, I am just too lazy to follow this guy instructions</p>
+        <p>I just want go straight to github page and edit my index.html file </p>
+        <p>index.html is at main branch which is at https://github.com/user_name/my_repo/branches</p>
     </div>
 
 <div class="entry">
@@ -189,9 +191,23 @@ done
     Check and sync with NTC server
     sudo apt install ntpdate
     sudo ntpdate pool.ntp.org
-    I installed Fake-hwclock from the appstore
-    If all fail, we manually run command line
+    install Fake-hwclock from the appstore
+    If all fail, manually run command line
     sudo date --set="Thu Jan 12 11:30:46"
+    Because sudo require password, I asked ChatGPT:
+    How to run sudo command "sudo ntpdate pool.ntp.org" without being prompted for a password? 
+    You can configure the sudoers file to allow specific commands to be executed without authentication. 
+    Here's how you can do it:
+    sudo visudo
+    your_username ALL=(ALL) NOPASSWD: /usr/sbin/ntpdate
+    Save and Exit
+    Run the command 
+    sudo /usr/sbin/ntpdate pool.ntp.org
+    I put the command in a script
+    #!/bin/bash
+    sudo /usr/sbin/ntpdate pool.ntp.org
+    Finally, it works. 
+    I do not need to run daily sudo date --set="Thu Jan 12 11:30:46"
     </code></pre>
 
 </p>
