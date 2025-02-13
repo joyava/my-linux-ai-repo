@@ -40,25 +40,30 @@
         
         Feb 2025
 
-        Impressive 512GB PC build ($2000)
-        This guy built this $2000 PC to run Deepseek AI locally.
+        $2000 PC build to run Deepseek AI
+        This guy built this PC to run Deepseek AI locally.
         Usually only big guys like Google, Meta, OpenAI, and Microsoft have money to run big AI.
         Now, even an average Joe with $2000 PC can run 671B AI locally (compatible with the real ChatGPT).
         <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
         <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
         
-        Bricking Steam Deck With Multi BOS
-        I don't want to use my Steam Deck's desktop mode any more because my mouse cursor is constantly freezing. It annoys me so much. Instead of SteamOS, I want Linux Mint Cinnamon OS on my Steam Deck.
-        I tried to do a triple boot on my Steam Deck via this video instruction
+        Bricking Steam Deck With Multi OS
+        I don't want to use my Steam Deck's desktop mode any more because my mouse cursor is constantly freezing. 
+        It annoys me so much. So I installed Linux Mint Cinnamon OS along side of SteamOS.
+        I followed this video instruction and almost brick my Steam Deck.
         <a href="https://youtu.be/zEpcBWX9K_o?si=XRPUbJhnGVN1BetV/" target="_blank">Visit this video</a>
-        I am unable to duplicate his installation. So, I forced Windows Manager out of BootManager.
+        Because it is not working, I tried to force Windows Manager out of BootManager.
         Upon reboot, this SCARY message pop up:
         "fTPM data error. 
         Select [No] to keep fTPM data and continue boot or
-        select [Yes] to reset fTPM. If BitLocker or encryption is enabled, the system will not boot without a recovery key.
+        Select [Yes] to reset fTPM. 
+        If BitLocker or encryption is enabled, the system will not boot without a recovery key.
         Yes or No"
-        Warning: don't click YES because by default Windows 11 automatically set Bitlocker and encryption enable. You will brick your Steam Deck.
-        Solution: boot to bios. In Menu/Advance/Peripheral, you can disable fTPM (firmware TPM). When I boot up again, my SteamDeck does not pop up error message like before. But, from now on, Windows 11 can never be installed on this device because of no TPM.
+        Warning: don't click YES because you will brick your Steam Deck.
+        By default Windows 11 automatically sets Bitlocker and encryption enable. 
+        Solution: boot to bios. In Menu/Advance/Peripheral, I disable fTPM (firmware TPM). 
+        When I rebooted, it did not show that scary error message again. 
+        But, from now on, Windows 11 can never be installed on this device because of no TPM.
 
         How to choose a Linux Distro?
         <a href="https://youtu.be/9C0rpRkk_oo?si=zWjhxt0ksDH071Xc" target="_blank">Visit this video</a>
@@ -76,15 +81,16 @@
         
         What is my impression of Linux Mint Cinnamon?
         
-        My mouse cursor always freezes on Linux Mint with XFCE desktop
-        But, Linux Mint with Cinnamon desktop is very stable. I don't have any issue at all. It runs very smooth. Cinnamon is better than XFCE because XFCE doesn't have a lot of features: no night time light, no screen saver, ect.
+        I love it. It has all the features that Linux Mint XFCE does not have.
+        For example, it has screen saver and night light.
+        On this Cinnamon desktop, my mouse is not freezing any more.
 
         Comparing performance: Steam Deck vs Laptop 
-    I have Linux Mint and Ollama installed on a Steam Deck and laptop with i5 CPU.
+        I installed Linux Mint and Ollama on my Steam Deck and laptop with i5 CPU.
         I query Ollama AI with the exact same question on both devices.
         Both devices gave me the answer right away. 
-        It means both i5 10th gen laptop and Steam Deck have roughly the same performance.
-        Here is the difference: Temp on i5 laptop is 37'C. Temp on Steam Deck is 47'C.
+        It means that the Steam Deck has the same performance as my laptop.
+        But, the temperature on i5 laptop is 37'C and on Steam Deck is 47'C.
 
         Can this $180 mini PC perform better than a Steam Deck?
         <a href="https://www.techradar.com/pro/eat-this-raspberry-pi-5-here-are-3-powerful-amd-ryzen-mini-pcs-that-sell-for-under-usd180-and-trounce-expensive-sbcs" target="_blank">Bosgame mini pc spec</a>
@@ -133,7 +139,7 @@
     </div>
 
     <div class="entry">
-        <h2>Install distro & browser</h2>
+        <h2>How to innstall distro & browser</h2>
         
  <ul>
     <li>Download Rufus and Ubuntu.iso on a Windows laptop. Plug in USB. Run Rufus. Install Ubuntu to USB.</li>
@@ -313,7 +319,7 @@ done
     </div>
 
  <div class="entry">
-        <h2>Installing Windows 95 theme on Linux Mint XFCE desktop</h2>
+        <h2>How to install Windows 95 theme on Linux Mint XFCE desktop</h2>
         <a href="https://youtu.be/j5UeSj2F-yc?si=VgfVDe2rgDgRW5Zt" target="_blank">Visit YouTube</a>
         <p>This YouTube video will show you how to install Windows95 theme on an ubuntu base distro with xfce.</p>
     </div>
@@ -360,14 +366,14 @@ It seems to fix error.
     </div>
     
     <div class="entry">
-        <h2>Heating Problem</h2>
+        <h2>Heating Problem on my laptop</h2>
         <a href="https://amzn.to/39BnQjB" target="_blank">Visit Amazon</a>
         <p>I bought some Grizzly Thermal Paste.</p>
-        <p>After I put some paste on the CPU, Temp drops. Success!</p>
+        <p>After I put some paste on the CPU, Temp drops by 10 degree. Success!</p>
     </div>
 
     <div class="entry">
-        <h2>Dry Eyes</h2>
+        <h2>Dry Eyes Problem</h2>
         <p>BenQ Monitor, Reduce Blue Light, Dual HDMI
     <pre><code>
         This monitor has 4 buttons at the bottom right:
@@ -384,7 +390,7 @@ It seems to fix error.
         <p>I can't stand the cursor's sluggishness
     <pre><code>
         Some Raspberry Pi can be overclock to 3GHz
-        But, my RPI5 won't boot at 2900Mhz and 3000Mhz
+        But, my RPI5 is unable to boot to 2900Mhz
         My RPI5 is stable at 2700Mhz and 2800Mhz.
         RPI5 is much faster than RPI4.
         But, I still hate the sluggishness. 
@@ -402,7 +408,7 @@ It seems to fix error.
         There is a button that look like a tiny joystick.
         Instead of moving North, South, East, West, I pushed up.
         Suddenly a menu appeared. There are 3 or 4 modes.
-        In each mode, I change the brightness to 25% and blue-light-blocking to maximum.
+        In each mode, I changed the brightness to 0% and blue-light-blocking to maximum.
         It seems to work pretty good. My eyes are not hurting any more.
         Guess what. I plugged in my Chromebook's output to the second HDMI input.
         Suddenly, I have a giant e-ink screen to read whatever I want. WOW.
@@ -416,7 +422,7 @@ It seems to fix error.
     <pre><code>
         With dual monitors, my mouse cursor is very sluggish.
         Google and YouTube did not yield any solution
-        I give up. I will install Linux Mint. 
+        I give up on SteamOS as my daily driver.
         Maybe Linux Mint can run dual monitors smoothly.
     </code></pre>
 </p>
@@ -427,6 +433,7 @@ It seems to fix error.
         <p>Using command line instead of GUI
     <pre><code>
         I install xsct from the appstore
+        I can adjust the blue light setting with xsct app
         xsct 1200 (low blue light, night time, warm)
         xsct 6500 (max blue light, day time, cool)
         xsct 1200 1 (low blue light, max brightness)
