@@ -39,7 +39,66 @@
         <a href="https://aminoapps.com/c/advertiseforyou/recent/" target="_blank">Daily blog at Aminoapps</a>
         
         Feb 2025
-        Running 671B Deepseek AI model on Raspberry Pi 5
+        What budget device can run 70B LLM locally?
+        $200 Dell PowerEdge R630 96 GB RAM 28 Core Xeon can run 70B LLM on CPU and RAM locally
+        I asked ChatGPT how long will it take to a 20 token query?
+        96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
+        Without quantization, a 70B model may require 200GB+ RAM
+        If you manage to load a 4-bit quantized 70B model (like LLaMA 2 70B GGUF 4-bit):
+        Cold Start (Loading the model): 5–15 minutes (swapping might make it worse).
+        If you manage to load a 4-bit quantized 70B model on your Dell PowerEdge R630 
+        (96GB RAM, 28-core Xeon, no GPU), 
+        Here's an estimate for a 20-token query:
+        For 20 tokens, the CPU might take 100–400 seconds (1.5–6.5 minutes)
+        This sever will take about 400 Watt per hour of energy
+        (My laptop uses about 450 watt per day like 10 hours)
+        I will unplug as soon as Ollama finish giving the answer. 
+        For 15 minutes of use, it should cost about 100 Watt. 
+        (imo, this dell server could serve as a space heater during winter)
+        
+        Dual Boot SteamOS and Ubuntu
+        I have mentioned that I kinda damaged my Steam Deck's TPM
+        Windows will not be running on this device any more because of TPM
+        I have mentioned that I was unable to dual boot
+        Now, I kinda can dual boot
+        If I reboot from Ubuntu, I get to that rEFInd menu
+        If I reboot from Steam OS, I don't see that rEFInd menu
+        I changed from /EFI/Fedora to /EFI/Ubuntu
+        Here is what I did to  /esp/efi/refind/refind.conf
+1)(deck@steamdeck ~)$ sudo cat /esp/efi/refind/refind.conf
+[sudo] password for deck: 
+# GUI generated refind.conf Config File
+timeout 5
+use_nvram false
+hideui singleuser,hints,arrows,label,badges
+banner background.png
+banner_scale fillscreen
+resolution 3
+enable_touch
+#enable_mouse
+showtools
+#scanfor manual,external
+scanfor manual
+default_selection "+,1"
+
+menuentry "SteamOS" {
+        icon /EFI/refind/os_icon1.png
+        firmware_bootnum 0003
+}
+
+menuentry "Nobara" {
+        icon /EFI/refind/os_icon2.png
+        #loader /EFI/fedora/shimx64.efi
+         loader /EFI/ubuntu/shimx64.efi
+        graphics on
+}
+(deck@steamdeck ~)$ sudo efibootmgr
+
+
+        
+        Running 671B Deepseek AI model on a Raspberry Pi 5
+        Do you believe this guy?
+        I feel something fishy about this demo
         Llama CCP operates at 0.04 token per second
         It took 1 hour to run a query with 10 words.
         For my use case, I don't care how long.
