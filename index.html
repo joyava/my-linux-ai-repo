@@ -47,7 +47,7 @@
         What budget device can run 70B LLM locally?
         
         $200 Dell PowerEdge R630 96 GB RAM 28 Core Xeon can run 70B LLM on CPU and RAM locally
-        I asked ChatGPT how long will it take to a 20 token query?
+        I asked ChatGPT how long will it take to run a 20-token-query?
         96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
         Without quantization, a 70B model may require 200GB+ RAM
         If you manage to load a 4-bit quantized 70B model (like LLaMA 2 70B GGUF 4-bit):
@@ -62,14 +62,20 @@
         For 15 minutes of use, it should cost about 100 Watt. 
         (imo, this dell server could serve as a space heater during winter)
         
-        Dual Boot SteamOS and Ubuntu
+        Dual Boot SteamOS and Ubuntu (kind off)
         
         I have mentioned that I kinda damaged my Steam Deck's TPM
         Windows will not be running on this device any more because of TPM
-        I have mentioned that I was unable to dual boot
+        I have also mentioned that I was unable to dual boot
         Now, I kinda can dual boot
-        If I reboot from Ubuntu, I get to that rEFInd menu
-        If I reboot from Steam OS, I don't see that rEFInd menu
+        If I reboot from Ubuntu, 
+            I get to that rEFInd menu
+            I can choose Ubuntu again
+            I don't need to hold down vol button and power button
+        If I reboot from Steam OS, 
+            I don't see that rEFInd menu
+            I need to hold down the vol up button and power button
+            Reboot from SteamOS is still problematic
         I changed from /EFI/Fedora to /EFI/Ubuntu
         Here is what I did to  /esp/efi/refind/refind.conf
 1)(deck@steamdeck ~)$ sudo cat /esp/efi/refind/refind.conf
