@@ -39,6 +39,10 @@
         <a href="https://aminoapps.com/c/advertiseforyou/recent/" target="_blank">My other personal blog at Aminoapps</a>
 
         March 2025
+
+        Running Deepseek R1:671B locally on 16GB RAM and 2T SSD swap
+        <a href="https://youtu.be/-LvT8CktkWc?si=dUSSHLrJxz9aj9ix" target="_blank">Visit this YouTube video</a>
+        
         New GMKtek K10 mini PC 96G RAM may run 70B model
         <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
         
@@ -543,6 +547,40 @@ It seems to fix error.
     </div>
 
 <div class="entry">
+        <h2>Run full size Deepseek:671B locally on SSD swap</h2>
+        <p>This is how to run the full-size Deepseek r1 locally, on consumer hardware, EXTREMELY slowly!
+    <pre><code>
+        
+
+The basic steps are:
+Install a 2tb SSD
+Install Ubuntu with over 1TB of swap
+Install Ollama
+Use Ollama to run Deepseek r1 671b
+
+This computer's approximate specs:
+AMD Ryzen 7 5700
+16gb generic ram
+No gpu, just whatever is built in on the Ryzen
+2tb WD_Black SN770 NVMe SSD
+
+The results:
+About 50 seconds per token, 0.02token/second
+About 15mins from prompt to first output token
+Full response took overnight
+
+Things to note:
+SSDs have finite write lifespan
+This output used ~6TB of the lifetime 1200TB of writes, meaning we used up about 0.5% of the hard drive's total lifespan creating a single response
+It is probably faster/cheaper to use the cloud if you want fast, cheap outputs
+You can have a ton of fun with the smaller 7b model, which is small enough to run in ram and even works on a small macbook air.
+<a href="https://youtu.be/-LvT8CktkWc?si=dUSSHLrJxz9aj9ix" target="_blank">To see it in action, visit this YouTuber</a>
+        
+    </code></pre>
+</p>
+    </div>
+
+<div class="entry">
         <h2>Title</h2>
         <p>Description.
     <pre><code>
@@ -551,6 +589,17 @@ It seems to fix error.
     </code></pre>
 </p>
     </div>
+
+    <div class="entry">
+        <h2>Title</h2>
+        <p>Description.
+    <pre><code>
+        Write your code here
+        And here
+    </code></pre>
+</p>
+    </div>
+    
     
 </body>
 </html>
