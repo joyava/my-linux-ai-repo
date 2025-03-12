@@ -40,41 +40,57 @@
 
         March 2025
 
-        Running Deepseek R1:671B locally on 16GB RAM and 2T SSD swap
+        Cheapest way to run 671B model using 1.1T Swap and local CPU (without GPU)
+        
+        Running Deepseek R1:671B on 16GB RAM, 2T SSD swap, and local CPU
         <a href="https://youtu.be/-LvT8CktkWc?si=dUSSHLrJxz9aj9ix" target="_blank">Visit this YouTube video</a>
+        It costs money to allow model to think outloud. 
+        I am looking into Deepseek-V3:671B model because it does not think outloud.
+        
+        x x x x x x x x x x x x x x x x x  x x x x x x x 
+        Another budget way to run 70B model locally
         
         New GMKtek K10 mini PC 96G RAM may run 70B model
         <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
         
+        x x  x x  x x x x x x x x x x x x x x  x x x x x x
+        Cheapest way to run 70B model using 136G RAM server
         
         HP Proliant Gen8 Server, 136G RAM, 2x2560v2 Xeons
-        
-        I saw a comment on YouTube that show another setup can run 70B model
+        I saw a comment on YouTube that show another setup that can run 70B model
         He was able to run Deepseek R1 70B on old HP Proliant Gen8 server, no GPU
         136G RAM, an 2x2560V2 xeons.
-        It took 1 hour to process a "tell me a story..."
+        It took 1 hour to process a "tell me a story..." querry
         
         Feb 2025
-        Asus ROG Flow GZ301, 128 GB RAM laptop 
+
+        Another way to run 70B model locally using 128 GB RAM laptop
         
+        Asus ROG Flow GZ301, 128 GB RAM laptop 
         I am looking for a laptop with 128GB RAM to run LLM locally on CPU only
         <a href="https://www.reddit.com/r/LocalLLaMA/comments/1isxhoy/new_laptops_with_amd_chips_have_128_gb_unified/" target="_blank">Visit this Reddit Thread</a>
         It is a new Asus ROG Flow GZ302, 128GB RAM ($2800)
         Someone on Reddit mentioned that LLM model can't use the GPU on this laptop. 
         LLM runs on CUDA which requires Nvidia card.
-        But I am fine with Ollama LLM run on CPU with 128GB of RAM
-        But it is a bit sad that LLM is not using this 96G VRAM
+        But I am fine with Ollama LLM run on CPU with 128GB of RAM without GPU
+        But it is a bit sad that LLM is not using this 96G VRAM (from GPU)
 
-         Text Website like this one
-        <a href="https://xn--gckvb8fzb.com/" target="_blank">This guy is making a website just like me (text only)</a>
+        x x x  x x x x x x x x x x x x  x  x
+        An old style website with text only
         
-        Run your own AI cluster 
+        <a href="https://xn--gckvb8fzb.com/" target="_blank">This guy is making a website just like me (text only)</a>
+
+        x  x x x x x  x xx  x x x x x x x  xx x  x x x x x x 
+        Cheapest way to run LLM model locally via AI cluster
+        
         If you don't have money to buy Nvidia GPU, you can pool all your devices together to run LLM AI
           <a href="https://github.com/exo-explore/exo" target="_blank">Visit this GitHub Project</a>
           <a href="https://www.hackster.io/news.amp" target="_blank">Dust off that old hardware and run Deepseek</a>
+
+        x x  x x x x  x x x x x x x x x x x x x x  x x  x x x x x x  x x x  x
+        Cheapest way to run 70B model locally using Dell R630 server ($200)
         
-        $200 Dell PowerEdge R630 96 GB RAM 28 Core Xeon can run 70B LLM on CPU and RAM locally
-        
+        Dell PowerEdge R630 96 GB RAM, 28 Core Xeon, can run 70B LLM on CPU without GPU
         I asked ChatGPT how long will it take to run a 20-token-query?
         96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
         Without quantization, a 70B model may require 200GB+ RAM
@@ -547,11 +563,10 @@ It seems to fix error.
     </div>
 
 <div class="entry">
-        <h2>Run full size Deepseek:671B locally on SSD swap</h2>
-        <p>This is how to run the full-size Deepseek r1 locally, on consumer hardware, EXTREMELY slowly!
+        <h2>Cheapest way to run full Deepseek:671B using 1.1T swap partition</h2>
+        <p>Run a Full-size Deepseek:671B-r1 on consumer hardware, EXTREMELY slowly!
     <pre><code>
         
-
 The basic steps are:
 Install a 2tb SSD
 Install Ubuntu with over 1TB of swap
