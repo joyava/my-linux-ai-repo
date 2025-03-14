@@ -114,22 +114,23 @@
         I will unplug as soon as Ollama finish giving the answer. 
         For 15 minutes of use, it should cost about 100 Watt. 
         (imo, this dell server could serve as a space heater during winter)
-        
-        Dual Boot SteamOS and Ubuntu (kind off)
+
+        x  x x x x x  x x x x x x x x x  x x x x
+        Scary Dual Boot Problem on Steam Deck (TPM error)
+
+        Click YES to brick your Steam Deck!
         
         I have mentioned that I kinda damaged my Steam Deck's TPM
         Windows will not be running on this device any more because of TPM
-        I have also mentioned that I was unable to dual boot
-        Now, I kinda can dual boot
+        
         If I reboot from Ubuntu, 
-            I get to that rEFInd menu
+            I get to rEFInd menu
             I can choose Ubuntu again
             I don't need to hold down vol button and power button
         If I reboot from Steam OS, 
-            I don't see that rEFInd menu
-            I need to hold down the vol up button and power button
-            Reboot from SteamOS is still problematic
-        I changed from /EFI/Fedora to /EFI/Ubuntu
+            I will not get to rEFInd menu. It boots into Steam OS.
+            I need to hold down the vol up button and power button to get into bios
+            I changed from /EFI/Fedora to /EFI/Ubuntu (see below)
         Here is what I did to  /esp/efi/refind/refind.conf
 1)(deck@steamdeck ~)$ sudo cat /esp/efi/refind/refind.conf
 [sudo] password for deck: 
@@ -160,7 +161,11 @@ menuentry "Nobara" {
 }
 (deck@steamdeck ~)$ sudo efibootmgr
 
+        Update: march 2024, I think if I replace the current ssd with original ssd,
+        I should get back to original state with no scary message pop up!
+        Once boot up from original ssd, I could clone current OS to 1 TB SSD with dd command.
         
+        x x x x x x x x x x  x x x x x x x
         DIY $2000 PC Running Deepseek AI
         
         This guy built this PC to run Deepseek AI locally.
