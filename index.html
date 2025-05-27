@@ -31,13 +31,11 @@
 </head>
 <body>
 
-    <h1>Welcome To My Tech Blog</h1>
+    <h1>Welcome To My Blog</h1>
 
 <div class="entry">
-        <h2>Monthly entries</h2>
+        <h2>Entries</h2>
     <pre><code>
-
-        April
 
         Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
         On reddit, people spots 1.8 t/s which is slow
@@ -45,7 +43,8 @@
         But I think power consumption is a lot less and more expensive.
         <a href="<a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>" target="_blank">Visit video</a>
         
-        $500 Deepseek R1 671b Local AI Server
+        x x x  x x x x x x x x x x x x x x x x x x x 
+        Deepseek R1 671b Local AI Server ($500)
         It is cheap, but it is eating a lot of power.
         Wow, you can have a professional AI running locally.
         
@@ -82,7 +81,7 @@
 
         This article is an absolute Gem. 
         Obsidian has AI plug in (great for local). 
-        Local AI is best for private documents
+        For privacy, we need to run AI locally
    
         <a href="https://www.howtogeek.com/little-known-linux-apps-i-cant-live-without/" target="_blank">Visit HowToGeek</a>
         
@@ -91,8 +90,7 @@
         
         Running Deepseek R1:671B on 16GB RAM, 2T SSD swap, and local CPU
         <a href="https://youtu.be/-LvT8CktkWc?si=dUSSHLrJxz9aj9ix" target="_blank">Visit this YouTube video</a>
-        It costs money to allow model to think outloud. 
-        I am looking into Deepseek-V3:671B model because it does not think outloud.
+        This method will destroy SSD very fast
         
         x x x x x x x x x x x x x x x x x  x x x x x x x 
         Another budget way to run 70B model locally
@@ -142,56 +140,6 @@
         For 15 minutes of use, it should cost about 100 Watt. 
         (imo, this dell server could serve as a space heater during winter)
 
-        x  x x x x x  x x x x x x x x x  x x x x
-        Scary Dual Boot Problem on Steam Deck (TPM error)
-
-        Click YES to brick your Steam Deck!
-        
-        I have mentioned that I kinda damaged my Steam Deck's TPM
-        Windows will not be running on this device any more because of TPM
-        
-        If I reboot from Ubuntu, 
-            I get to rEFInd menu
-            I can choose Ubuntu again
-            I don't need to hold down vol button and power button
-        If I reboot from Steam OS, 
-            I will not get to rEFInd menu. It boots into Steam OS.
-            I need to hold down the vol up button and power button to get into bios
-            I changed from /EFI/Fedora to /EFI/Ubuntu (see below)
-        Here is what I did to  /esp/efi/refind/refind.conf
-1)(deck@steamdeck ~)$ sudo cat /esp/efi/refind/refind.conf
-[sudo] password for deck: 
-# GUI generated refind.conf Config File
-timeout 5
-use_nvram false
-hideui singleuser,hints,arrows,label,badges
-banner background.png
-banner_scale fillscreen
-resolution 3
-enable_touch
-#enable_mouse
-showtools
-#scanfor manual,external
-scanfor manual
-default_selection "+,1"
-
-menuentry "SteamOS" {
-        icon /EFI/refind/os_icon1.png
-        firmware_bootnum 0003
-}
-
-menuentry "Nobara" {
-        icon /EFI/refind/os_icon2.png
-        #loader /EFI/fedora/shimx64.efi
-         loader /EFI/ubuntu/shimx64.efi
-        graphics on
-}
-(deck@steamdeck ~)$ sudo efibootmgr
-
-        Update: march 2024, I think if I replace the current ssd with original ssd,
-        I should get back to original state with no scary message pop up!
-        Once boot up from original ssd, I could clone current OS to 1 TB SSD with dd command.
-        
         x x x x x x x x x x  x x x x x x x
         DIY $2000 PC Running Deepseek AI
         
@@ -201,7 +149,8 @@ menuentry "Nobara" {
         <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
         <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
         
-        Bricking Steam Deck's TPM With rEFInd Installation
+        x x x x x x x x x x x x  x x x x x x x x x
+        Bricking Steam Deck With Dual Boot
         
         I installed Linux Mint Cinnamon OS along side of SteamOS.
         I followed this video instruction and almost brick my Steam Deck.
@@ -219,6 +168,11 @@ menuentry "Nobara" {
         When I rebooted, it did not show that scary error message again. 
         But, from now on, Windows 11 can never be installed on this device because of no TPM.
 
+        Update: I think if I replace the current ssd with the original ssd,
+        I should get back to the original state with no scary message pop up!
+        Note: you really need to make a copy of your original OS (maybe Filezilla help)
+
+        x x  x x x x x x x x x x x x  x
         How to choose a Linux Distro?
         <a href="https://youtu.be/9C0rpRkk_oo?si=zWjhxt0ksDH071Xc" target="_blank">Visit this video</a>
         <a href="https://librehunt.org/" target="_blank">Visit Libre Hunt</a>
@@ -238,10 +192,6 @@ menuentry "Nobara" {
         I would rather use Linux Mint and install a quick Windows XP theme
         This way I have less trouble with installing apps like Ollama and Obsidian
         <a href="https://youtu.be/n0kis4Q-VJg?si=CFNwdLK3sJvEBiG9" target="_blank">Visit this video</a>
-
-        Can this $180 mini PC perform better than a Steam Deck?
-        <a href="https://www.techradar.com/pro/eat-this-raspberry-pi-5-here-are-3-powerful-amd-ryzen-mini-pcs-that-sell-for-under-usd180-and-trounce-expensive-sbcs" target="_blank">Bosgame mini pc spec</a>
-        I think the answer is "NO" base on Google search.
 
     </code></pre>
     </div>
