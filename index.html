@@ -37,6 +37,8 @@
         <h2>Entries</h2>
     <pre><code>
 
+        Hardware:
+        
         Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
         On reddit, people spots 1.8 t/s which is slow
         It is about the same speed or worser than the $500 server below
@@ -50,41 +52,7 @@
         
         <a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>
         <a href="https://digitalspaceport.com/500-deepseek-r1-671b-local-ai-server/" target="_blank">Visit write up</a>
-        
-        Obsidian Note App 101
-        <a href="https://dev.to/proflead/obsidian-101-how-to-get-started-and-stay-organized-326b" target="_blank">Visit</a>
 
-        x x  x x x x  x x x x x x x
-        Ollama installation error
-
-        curl -fsSL https://ollama.com/install.sh | sh
-        ollama --version
-        Warning: could not connect to a running Ollama instance
-        Warning: client version is 0.6.1
-        joy@linux:~$ ollama list
-        Error: could not connect to ollama app, is it running?
-        How to fix it? type: ollama serve 
-
-        x  x x x x x  x x x x x x x x
-        Error on Gemma3:27B AI model
-
-        ollama run hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M
-        Error: POST predict: Post "http://127.0.0.1:39643/completion": EOF
-        This Error is misleading. It has nothing to do with webpage interface.
-        It means that 36GB of RAM in my PC is not enough.
-        ollama run gemma3:12b-it-q4_K_M
-        This quantize version runs in most PC
-        36GB of RAM is successfull for gemma3:12b-it-q4_K_M
-
-        x  x x x x x x  x x x x x
-        Very Useful Linux Apps
-
-        This article is an absolute Gem. 
-        Obsidian has AI plug in (great for local). 
-        For privacy, we need to run AI locally
-   
-        <a href="https://www.howtogeek.com/little-known-linux-apps-i-cant-live-without/" target="_blank">Visit HowToGeek</a>
-        
         x x x x x x x x x x x x x x x x x  x x x x x x x 
         Another budget way to run 70B model locally
         
@@ -130,7 +98,7 @@
         I will unplug as soon as Ollama finish giving the answer. 
         For 15 minutes of use, it should cost about 100 Watt. 
         (imo, this dell server could serve as a space heater during winter)
-
+        
         x x x x x x x x x x  x x x x x x x
         DIY $2000 PC Running Deepseek AI
         
@@ -139,6 +107,42 @@
         Now, even an average Joe with $2000 PC can run 671B AI locally (compatible with the real ChatGPT).
         <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
         <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
+        
+        x x  x x x x  x x x x x x x
+        Software: 
+        
+        Ollama installation error
+
+        curl -fsSL https://ollama.com/install.sh | sh
+        ollama --version
+        Warning: could not connect to a running Ollama instance
+        Warning: client version is 0.6.1
+        joy@linux:~$ ollama list
+        Error: could not connect to ollama app, is it running?
+        How to fix it? type: ollama serve 
+
+        x  x x x x x  x x x x x x x x
+        Error on Gemma3:27B AI model
+
+        ollama run hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M
+        Error: POST predict: Post "http://127.0.0.1:39643/completion": EOF
+        This Error is misleading. It has nothing to do with webpage interface.
+        It means that 36GB of RAM in my PC is not enough.
+        ollama run gemma3:12b-it-q4_K_M
+        This quantize version runs in most PC
+        36GB of RAM is successfull for gemma3:12b-it-q4_K_M
+
+        x  x x x x x x  x x x x x
+        Very Useful Linux Apps
+
+        This article is an absolute Gem. 
+        Obsidian has AI plug in (great for local). 
+        For privacy, we need to run AI locally
+   
+        <a href="https://www.howtogeek.com/little-known-linux-apps-i-cant-live-without/" target="_blank">Visit HowToGeek</a>
+
+        Obsidian Note App 101
+        <a href="https://dev.to/proflead/obsidian-101-how-to-get-started-and-stay-organized-326b" target="_blank">Visit</a>
         
         x x x x x x x x x x x x  x x x x x x x x x
         Bricking Steam Deck With Dual Boot
