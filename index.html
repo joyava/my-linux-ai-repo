@@ -39,14 +39,14 @@
 
         Hardware:
         
-        Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
+        News: Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
         On reddit, people spots 1.8 t/s which is slow
         It is about the same speed or worser than the $500 server below
         But I think power consumption is a lot less and more expensive.
         <a href="<a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>" target="_blank">Visit video</a>
         
         x x x  x x x x x x x x x x x x x x x x x x x 
-        Deepseek R1 671b Local AI Server ($500)
+        News: Deepseek R1 671b Local AI Server ($500)
         It is cheap, but it is eating a lot of power.
         Wow, you can have a professional AI running locally.
         
@@ -54,13 +54,13 @@
         <a href="https://digitalspaceport.com/500-deepseek-r1-671b-local-ai-server/" target="_blank">Visit write up</a>
 
         x x x x x x x x x x x x x x x x x  x x x x x x x 
-        Another budget way to run 70B model locally
+        News: Another budget way to run 70B model locally
         
         New GMKtek K10 mini PC 96G RAM may run 70B model
         <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
         
         x x  x x  x x x x x x x x x x x x x x  x x x x x x
-        Cheapest way to run 70B model using 136G RAM server
+        News: Cheapest way to run 70B model using 136G RAM server
         
         HP Proliant Gen8 Server, 136G RAM, 2x2560v2 Xeons
         I saw a comment on YouTube that show another setup that can run 70B model
@@ -69,7 +69,7 @@
         It took 1 hour to process a "tell me a story..." querry
 
         x x  x x x  xx  x x x x x x x x x x x xx x x x  x x x
-        Another way to run 70B model locally using 128 GB RAM laptop
+        News: Another way to run 70B model locally using 128 GB RAM laptop
         
         Asus ROG Flow GZ301, 128 GB RAM laptop 
         I am looking for a laptop with 128GB RAM to run LLM locally on CPU only
@@ -81,7 +81,7 @@
         But it is a bit sad that LLM is not using this 96G VRAM (from GPU)
 
         x x  x x x x  x x x x x x x x x x x x x x  x x  x x x x x x  x x x  x
-        Cheapest way to run 70B model locally using Dell R630 server ($200)
+        News: Cheapest way to run 70B model locally using Dell R630 server ($200)
         
         Dell PowerEdge R630 96 GB RAM, 28 Core Xeon, can run 70B LLM on CPU without GPU
         I asked ChatGPT how long will it take to run a 20-token-query?
@@ -100,7 +100,7 @@
         (imo, this dell server could serve as a space heater during winter)
         
         x x x x x x x x x x  x x x x x x x
-        DIY $2000 PC Running Deepseek AI
+        News: DIY $2000 PC Running Deepseek AI
         
         This guy built this PC to run Deepseek AI locally.
         Usually only big guys like Google, Meta, OpenAI, and Microsoft have money to run big AI.
@@ -111,7 +111,7 @@
         x x  x x x x  x x x x x x x
         Software: 
         
-        Ollama installation error
+        Problem: Ollama installation error
 
         curl -fsSL https://ollama.com/install.sh | sh
         ollama --version
@@ -119,54 +119,58 @@
         Warning: client version is 0.6.1
         joy@linux:~$ ollama list
         Error: could not connect to ollama app, is it running?
-        How to fix it? type: ollama serve 
+        
+        Answer: type: ollama serve 
 
-        x  x x x x x  x x x x x x x x
-        Error on Gemma3:27B AI model
+        x  x x x x x  x x x x x x x x x x x x x
+        Problem: Error on Gemma3:27B AI model
 
         ollama run hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M
         Error: POST predict: Post "http://127.0.0.1:39643/completion": EOF
+
+        Answer: you need more than 36GB of RAM
         This Error is misleading. It has nothing to do with webpage interface.
-        It means that 36GB of RAM in my PC is not enough.
+        You need more RAM because 36GB RAM in my PC is not enough.
+        I can't add more RAM to my PC. So I use a smaller model (12b)
         ollama run gemma3:12b-it-q4_K_M
         This quantize version runs in most PC
         36GB of RAM is successfull for gemma3:12b-it-q4_K_M
 
         x  x x x x x x  x x x x x
-        Very Useful Linux Apps
+        News: Very Useful Linux Apps
 
-        This article is an absolute Gem. 
+        This article is an absolute valuable.
         Obsidian has AI plug in (great for local). 
         For privacy, we need to run AI locally
    
         <a href="https://www.howtogeek.com/little-known-linux-apps-i-cant-live-without/" target="_blank">Visit HowToGeek</a>
 
-        Obsidian Note App 101
+        News: Obsidian Note App 101
         <a href="https://dev.to/proflead/obsidian-101-how-to-get-started-and-stay-organized-326b" target="_blank">Visit</a>
         
-        x x x x x x x x x x x x  x x x x x x x x x
-        Bricking Steam Deck With Dual Boot
+        x x x x x x x x x x x x  x x x x x x x x x x x  x x x x x x x x 
+        Problem: I Bricked my Steam Deck because of installing Dual Boot
         
         I installed Linux Mint Cinnamon OS along side of SteamOS.
         I followed this video instruction and almost brick my Steam Deck.
         <a href="https://youtu.be/zEpcBWX9K_o?si=XRPUbJhnGVN1BetV/" target="_blank">Visit this video</a>
-        Because it is not working, I tried to force Windows Manager out of BootManager.
-        Upon reboot, this SCARY message pop up:
-        "fTPM data error. 
+        Because installation failed, I tried to force Windows Manager out of BootManager.
+        Upon reboot, this SCARY message pop up: "fTPM data error. 
         Select [No] to keep fTPM data and continue boot or
         Select [Yes] to reset fTPM. 
         If BitLocker or encryption is enabled, the system will not boot without a recovery key.
         Yes or No"
         Warning: don't click YES because you will brick your Steam Deck.
         By default Windows 11 automatically sets Bitlocker and encryption enable. 
-        Solution: boot to bios. In Menu/Advance/Peripheral, I disable fTPM (firmware TPM). 
+        
+        My answer: boot to bios. In Menu/Advance/Peripheral, I disable fTPM (firmware TPM). 
         When I rebooted, it did not show that scary error message again. 
         But, from now on, Windows 11 can never be installed on this device because of no TPM.
 
-        Update: I think if I replace the current ssd with the original ssd,
+        Update: imo, if I replace the current ssd with the original ssd,
         I should get back to the original state with no scary message pop up!
-        Note: you really need to make a copy of your original OS (maybe Filezilla help)
-
+        So, keep your original SSD in a safe place just in case you need it 
+        
         x x  x x x x x x x x x x x x  x
         How to choose a Linux Distro?
         <a href="https://youtu.be/9C0rpRkk_oo?si=zWjhxt0ksDH071Xc" target="_blank">Visit this video</a>
