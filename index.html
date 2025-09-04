@@ -37,87 +37,7 @@
         <h2>News</h2>
     <pre><code>
 
-        Hardware News:
-
-        Sep 2, 2025: this entry is my personal opinion
-        Everytime I look for a brand new Linux computer, it always over $1000
-        I stop looking because I realized that a $350 Steam Deck is the cheapest Linux Mini PC.
-        
-        x x  x x x x x x x x x  x x x x x x x x x x x x x x
-        News: $2800 MaxSun Micro Station with Core Ultra 9
-        275HX, 256GB DDR5, two Arc Pro B60 GPU
-        
-        <a href="https://videocardz.com/newz/maxsun-micro-station-with-core-ultra-9-275hx-256gb-ddr5-memory-and-two-arc-pro-b60-gpus-targets-price-under-2800" target="_blank">visit website</a>
-        
-        News: Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
-        On reddit, people spots 1.8 t/s which is slow
-        It is about the same speed or worser than the $500 server below
-        But I think power consumption is a lot less and more expensive.
-        <a href="<a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>" target="_blank">Visit video</a>
-        
-        x x x  x x x x x x x x x x x x x x x x x x x 
-        News: Deepseek R1 671b Local AI Server ($500)
-        It is cheap, but it is eating a lot of power.
-        Wow, you can have a professional AI running locally.
-        
-        <a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>
-        <a href="https://digitalspaceport.com/500-deepseek-r1-671b-local-ai-server/" target="_blank">Visit write up</a>
-
-        x x x x x x x x x x x x x x x x x  x x x x x x x 
-        News: Another budget way to run 70B model locally
-        
-        New GMKtek K10 mini PC 96G RAM may run 70B model
-        <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
-        
-        x x  x x  x x x x x x x x x x x x x x  x x x x x x
-        News: Cheapest way to run 70B model using 136G RAM server
-        
-        HP Proliant Gen8 Server, 136G RAM, 2x2560v2 Xeons
-        I saw a comment on YouTube that show another setup that can run 70B model
-        He was able to run Deepseek R1 70B on old HP Proliant Gen8 server, no GPU
-        136G RAM, an 2x2560V2 xeons.
-        It took 1 hour to process a "tell me a story..." querry
-
-        x x  x x x  xx  x x x x x x x x x x x xx x x x  x x x
-        News: Another way to run 70B model locally using 128 GB RAM laptop
-        
-        Asus ROG Flow GZ301, 128 GB RAM laptop 
-        I am looking for a laptop with 128GB RAM to run LLM locally on CPU only
-        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1isxhoy/new_laptops_with_amd_chips_have_128_gb_unified/" target="_blank">Visit this Reddit Thread</a>
-        It is a new Asus ROG Flow GZ302, 128GB RAM ($2800)
-        Someone on Reddit mentioned that LLM model can't use the GPU on this laptop. 
-        LLM runs on CUDA which requires Nvidia card.
-        But I am fine with Ollama LLM run on CPU with 128GB of RAM without GPU
-        But it is a bit sad that LLM is not using this 96G VRAM (from GPU)
-
-        x x  x x x x  x x x x x x x x x x x x x x  x x  x x x x x x  x x x  x
-        News: Cheapest way to run 70B model locally using Dell R630 server ($200)
-        
-        Dell PowerEdge R630 96 GB RAM, 28 Core Xeon, can run 70B LLM on CPU without GPU
-        I asked ChatGPT how long will it take to run a 20-token-query?
-        96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
-        Without quantization, a 70B model may require 200GB+ RAM
-        If you manage to load a 4-bit quantized 70B model (like LLaMA 2 70B GGUF 4-bit):
-        Cold Start (Loading the model): 5–15 minutes (swapping might make it worse).
-        If you manage to load a 4-bit quantized 70B model on your Dell PowerEdge R630 
-        (96GB RAM, 28-core Xeon, no GPU), 
-        Here's an estimate for a 20-token query:
-        For 20 tokens, the CPU might take 100–400 seconds (1.5–6.5 minutes)
-        This sever will take about 400 Watt per hour of energy
-        (My laptop uses about 450 watt per day like 10 hours)
-        I will unplug as soon as Ollama finish giving the answer. 
-        For 15 minutes of use, it should cost about 100 Watt. 
-        (imo, this dell server could serve as a space heater during winter)
-        
-        x x x x x x x x x x  x x x x x x x
-        News: DIY $2000 PC Running Deepseek AI
-        
-        This guy built this PC to run Deepseek AI locally.
-        Usually only big guys like Google, Meta, OpenAI, and Microsoft have money to run big AI.
-        Now, even an average Joe with $2000 PC can run 671B AI locally (compatible with the real ChatGPT).
-        <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
-        <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
-        
+   
         x x  x x x x  x x x x x x x
         Software News: 
 
@@ -126,6 +46,16 @@
         Now: WinBoat is a new way to install Windows apps on Linux OS
         <a href="https://www.zdnet.com/article/this-is-my-new-favorite-way-to-run-windows-apps-on-my-linux-pc-how-it-works/" target="_blank">Visit this guy's video</a>
 
+        Q: what is the difference GPT4All and Newelle?
+        A: GPT4All is a GUI application for Ollama.
+        Instead of querry Ollama in a terminal, I can querry Ollama in a beautiful GUI
+        Example: after upload a heart failure file, I ask GPT4All "what are some symptoms of CHF?"
+        On the other hand, Newelle is a little bit different
+        Newelle is also a GUI application for a Linux OS using Ollama brain.
+        I am querry newelle about file management.
+        Example: do I have this ADME file in my computer?
+        What is my computer's temperature?
+        
         x x  x x x x x x x x x x
         Linux Distro
 
@@ -215,6 +145,89 @@
         This way I have less trouble with installing apps like Ollama and Obsidian
         <a href="https://youtu.be/n0kis4Q-VJg?si=CFNwdLK3sJvEBiG9" target="_blank">Visit this video</a>
 
+        x x x x x xx x
+        Hardware News:
+
+        Sep 2, 2025: this entry is my personal opinion
+        Everytime I look for a brand new Linux computer, it always over $1000
+        I stop looking because I realized that a $350 Steam Deck is the cheapest Linux Mini PC.
+        
+        x x  x x x x x x x x x  x x x x x x x x x x x x x x
+        News: $2800 MaxSun Micro Station with Core Ultra 9
+        275HX, 256GB DDR5, two Arc Pro B60 GPU
+        
+        <a href="https://videocardz.com/newz/maxsun-micro-station-with-core-ultra-9-275hx-256gb-ddr5-memory-and-two-arc-pro-b60-gpus-targets-price-under-2800" target="_blank">visit website</a>
+        
+        News: Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
+        On reddit, people spots 1.8 t/s which is slow
+        It is about the same speed or worser than the $500 server below
+        But I think power consumption is a lot less and more expensive.
+        <a href="<a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>" target="_blank">Visit video</a>
+        
+        x x x  x x x x x x x x x x x x x x x x x x x 
+        News: Deepseek R1 671b Local AI Server ($500)
+        It is cheap, but it is eating a lot of power.
+        Wow, you can have a professional AI running locally.
+        
+        <a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>
+        <a href="https://digitalspaceport.com/500-deepseek-r1-671b-local-ai-server/" target="_blank">Visit write up</a>
+
+        x x x x x x x x x x x x x x x x x  x x x x x x x 
+        News: Another budget way to run 70B model locally
+        
+        New GMKtek K10 mini PC 96G RAM may run 70B model
+        <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
+        
+        x x  x x  x x x x x x x x x x x x x x  x x x x x x
+        News: Cheapest way to run 70B model using 136G RAM server
+        
+        HP Proliant Gen8 Server, 136G RAM, 2x2560v2 Xeons
+        I saw a comment on YouTube that show another setup that can run 70B model
+        He was able to run Deepseek R1 70B on old HP Proliant Gen8 server, no GPU
+        136G RAM, an 2x2560V2 xeons.
+        It took 1 hour to process a "tell me a story..." querry
+
+        x x  x x x  xx  x x x x x x x x x x x xx x x x  x x x
+        News: Another way to run 70B model locally using 128 GB RAM laptop
+        
+        Asus ROG Flow GZ301, 128 GB RAM laptop 
+        I am looking for a laptop with 128GB RAM to run LLM locally on CPU only
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1isxhoy/new_laptops_with_amd_chips_have_128_gb_unified/" target="_blank">Visit this Reddit Thread</a>
+        It is a new Asus ROG Flow GZ302, 128GB RAM ($2800)
+        Someone on Reddit mentioned that LLM model can't use the GPU on this laptop. 
+        LLM runs on CUDA which requires Nvidia card.
+        But I am fine with Ollama LLM run on CPU with 128GB of RAM without GPU
+        But it is a bit sad that LLM is not using this 96G VRAM (from GPU)
+
+        x x  x x x x  x x x x x x x x x x x x x x  x x  x x x x x x  x x x  x
+        News: Cheapest way to run 70B model locally using Dell R630 server ($200)
+        
+        Dell PowerEdge R630 96 GB RAM, 28 Core Xeon, can run 70B LLM on CPU without GPU
+        I asked ChatGPT how long will it take to run a 20-token-query?
+        96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
+        Without quantization, a 70B model may require 200GB+ RAM
+        If you manage to load a 4-bit quantized 70B model (like LLaMA 2 70B GGUF 4-bit):
+        Cold Start (Loading the model): 5–15 minutes (swapping might make it worse).
+        If you manage to load a 4-bit quantized 70B model on your Dell PowerEdge R630 
+        (96GB RAM, 28-core Xeon, no GPU), 
+        Here's an estimate for a 20-token query:
+        For 20 tokens, the CPU might take 100–400 seconds (1.5–6.5 minutes)
+        This sever will take about 400 Watt per hour of energy
+        (My laptop uses about 450 watt per day like 10 hours)
+        I will unplug as soon as Ollama finish giving the answer. 
+        For 15 minutes of use, it should cost about 100 Watt. 
+        (imo, this dell server could serve as a space heater during winter)
+        
+        x x x x x x x x x x  x x x x x x x
+        News: DIY $2000 PC Running Deepseek AI
+        
+        This guy built this PC to run Deepseek AI locally.
+        Usually only big guys like Google, Meta, OpenAI, and Microsoft have money to run big AI.
+        Now, even an average Joe with $2000 PC can run 671B AI locally (compatible with the real ChatGPT).
+        <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
+        <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
+        
+        
     </code></pre>
     </div>
 
