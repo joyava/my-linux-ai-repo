@@ -68,13 +68,22 @@
        
 
         According to marktechpost.com, these LLM has 128K context length
-        Llama 3.1-8B, llama 32 3B, Phi4 mini 3.8B, phi4 reasoning 14B
+        Llama 3.1-8B, Phi4 mini 3.8B, phi4 reasoning 14B, Gemma3
         I Google gpt-oss, both 120B and 20B version have 128K context
-        It seems 128K context is a big deal because 128K can read/analyze big document
-        
+        128K context is a big deal because 128K can analyze big document
+        But, for RAG (analyze big doc), you need 2 things:
+        1. you need a model as mention above
+        2. you need nomic-embeded-text (2K)
+        3. but, 2K is too limited.
+        4. qwen3-embedding-text (40K) is much better
+        For just Q&A, gemma3 is good, 
+        But for RAG, phi3:14B is best, and Gemma3 is terrible.
+
+        Oct 2, 2025
         New linux terminal file explorer: Yazi (I love it)
 
-        5 ubuntu extension (GNOME) for managing Windows
+        Oct 2, 2025
+        Five ubuntu extension (GNOME) for managing Windows
         Advanced Alt Tab Windows Switcher (AATWS)
         Auto Move Windows, Window On Top, Tiling Shell
         Workspace Indicator (best one)
@@ -392,7 +401,8 @@
 <div class="entry">
         <h2>How to install Virtualbox on Steam Deck?</h2>
         <a href="https://github.com/ivan-hc/VirtualBox-appimage" target="_blank">Visit GitHub</a>
-        
+        1. change network from NAB to bridge is best
+        2. then install localsend and syncthing for file transfer
     </div>
 
 <div class="entry">
@@ -497,7 +507,7 @@ It seems to fix error.
     </div>
 
     <div class="entry">
-        <h2>I love doing this update daily:</h2>
+        <h2>Daily update is a joy now.:</h2>
         <p>Add this line to ~/.bashrc</p>
         <p>alias update='sudo apt update && sudo apt upgrade -y' </p>
         <p>Source ~/.bashrc</p>
@@ -627,6 +637,7 @@ Model 7b is small enough to run in ram.
         Step 3: on your home directory, run ./AnythingLLMDesktop/start
 
         Imo, Newelle app is much better than AnythingLLM
+        But, the waiting is so long (15 minutes)
         
     </code></pre>
 </p>
@@ -785,6 +796,7 @@ Model 7b is small enough to run in ram.
         Step 1: instead of going through all Virtualbox technical stuffs
         Step 2: just install localsend on both your PC and your virtualbox OS
         Step 3: change network setting from NAB to Bridge (allow same wifi network)
+        Step 4: syncthing is another option for sharing files
     </code></pre>
 </p>
     </div>
