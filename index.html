@@ -783,20 +783,21 @@ Model 7b is small enough to run in ram.
     </div>
 
     <div class="entry">
-        <h2>How to increase the contex length for nomic-embeded-text?</h2>
-        <p>Answer: this robin guy is providing a model for you
+        <h2>What model is better than nomic-embeded-text?</h2>
+        <p>Answer: this robin guy is providing an 8K model for you
     <pre><code>
         Step 1: instead of going through all the technical stuff
         Step 2: just run this: ollama pull RobinBially/nomic-embed-text-8k
         Step 3:  <a href="https://ollama.com/RobinBially/nomic-embed-text-8k:latest" target="_blank">Visit his Github</a>
         Context: I am using Obsidian and Smart Second Brain plug-in. 
-                 The default nomic-embeded-text is 2K too small to be useful.
-                 This next nomic-embed-text-8k is much better, 
-                 but it took 8 minutes to start output something and 30 minutes to spit out the answer
-                 I am running on CPU only. And, the answer is not that great.
-                 Anyway, this S2B plug-in acts like Google notebook-LM. I give up on this ai feature.
-                 I also give up on Newelle AI and GPT4ALL as well. Both take too long.
-                 imo, Msty.app and ollama are the best for RAG
+                 The default nomic-embeded-text is 2K which is too small to be useful.
+                 This guy's nomic-embed-text-8k is much better, 
+                 but it is still too slow and not good enough
+                 Qwen3-embedding is much better (32K context length)
+                 Anyway, with S2B plug-in, Obsidian is kinda like Google notebook-LM. 
+                 But, I give up on all of them cuz too slow:
+                 Newelle AI, MSTY, S2B-obsidian-ollama
+                 
     </code></pre>
 </p>
     </div>
@@ -814,15 +815,16 @@ Model 7b is small enough to run in ram.
     </div>
 
 <div class="entry">
-        <h2>What is it like using a local ai (Ollama)?</h2>
-        <p>Answer: as a local ai, great. but ...
+        <h2>Topic 1: Obsidian, Smart Second Brain, and Ollama</h2>
+        <p>Topic 2: Kerakeep bookmark server on local PC
     <pre><code>
-        1: Regarding RAG (querry your own doc), MSTY has a mind of its own and gives shit answer
-        2: Newelle ai takes forever to spit out shit answer
-        3: Smart second brain (S2B) plugin for obsidian is good but require good models
+        0: What is it like using a local Ollama ai? it's not practical cuz too slow
+        1: MSTY has a mind of its own and gives shit answer (when querry your doc)
+        2: Newelle ai takes forever to spit out shit answer (when querry your doc)
+        3: Obsidian S2B plugin is good but require good models & strong CPU
         4: Smart second brain require 5 hours to index and 7 minutes to answer
-        5: Regarding querry your own document, Notebook LM is the best
-        6: Instead of S2B, just click on search icon in obsidian and be done with it
+        5: Notebook LM is the best for querry your own document (no privacy)
+        6: But the best is still the Obsidian build in search function
         
         OFF TOPIC
         1: Kara-keep (bookmark app) for linux
@@ -844,7 +846,7 @@ Model 7b is small enough to run in ram.
 
     <div class="entry">
         <h2>Obsidian Tips</h2>
-        <p>Answer: 
+        <p>Comment: how to search within working document?
     <pre><code>
         Step 1: control F for searching the current/working document
         Step 2: the magnification glass (search) is like grep in linux
@@ -853,8 +855,41 @@ Model 7b is small enough to run in ram.
     </div>
 
     <div class="entry">
+        <h2>Ubuntu, Close Lid, Screen Off</h2>
+        <p>Q: Can the 'lid close' switch be configured somehow to simply turn off the screen but otherwise the laptop is running as normal?
+    <pre><code>
+        Step 1: 
+        <a href="https://unix.stackexchange.com/questions/248033/configure-linux-laptop-to-switch-off-screen-but-otherwise-remain-running-when-li" target="_blank">Visit</a>
+        Edit the grub config sudo nano /etc/default/grub. Change the line
+        I've got it working by adding consoleblank=5 to the kernel options and changing the HandleLidSwitch and HandleLidSwitchExternalPower to ignore in the /etc/systemd/logind.conf.
+
+        Edit the grub config sudo nano /etc/default/grub. Change the line
+        GRUB_CMDLINE_LINUX_DEFAULT="quiet consoleblank=5"
+
+        This turns the screen off after 5 seconds. When you hit the keyboard, it will turn on again.
+        Run sudo update-grub to activate your changes.
+
+        Next:
+        Edit the sudo nano /etc/systemd/logind.conf and change HandleLidSwitch and HandleLidSwitchExternalPower to ignore and remove the #.
+        HandleLidSwitch=ignore HandleLidSwitchExternalPower=ignore
+        Now reboot
+
+        Xxxxx
+
+        This worked for me
+        nano ~/.bash_profile
+
+
+        if [[ $(tty) == /dev/tty1 ]]; then setterm --blank 1 --powerdown 2 --powersave on fi
+
+
+    </code></pre>
+</p>
+    </div>
+
+  <div class="entry">
         <h2>How to?</h2>
-        <p>Answer: 
+        <p>Comment: 
     <pre><code>
         Step 1: 
         Step 2: 
@@ -864,17 +899,7 @@ Model 7b is small enough to run in ram.
 
   <div class="entry">
         <h2>How to?</h2>
-        <p>Answer: 
-    <pre><code>
-        Step 1: 
-        Step 2: 
-    </code></pre>
-</p>
-    </div>
-
-  <div class="entry">
-        <h2>How to?</h2>
-        <p>Answer: 
+        <p>Comment: 
     <pre><code>
         Step 1: 
         Step 2: 
