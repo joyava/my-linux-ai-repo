@@ -37,251 +37,45 @@
         <h2>News</h2>
     <pre><code>
 
-   
-        x x  x x x x  x x x x x x x
-        Software News: 
-
         <a href="https://" target="_blank">Visit this video</a>
         
         Oct 19, 2025: Vault 2 Book plugin for Obsidian
         It condense your entire vault into 1 file
-        Then you use another plugin to convert textfile into pdf
-        The plugin is Better Export PDG
+        Then you use another plugin (Better Export PDF) to convert this textfile into pdf
         Then you upload one single file into Notebook LM
         <a href="https://www.xda-developers.com/move-obsidian-knowledge-vault-to-notebooklm-with-plugins/" target="_blank">Visit this article</a>
         
-        Oct 15, 2025: installing Linux appstore (flatpak)
+        Oct 15, 2025: installing a flatpak GUI appstore 
         It requires flatpak already installed on your Linux OS
-        This is much easier than installing apps via command line
+        Installing app with GUI is much easier than via a command line
          <a href="https://www.zdnet.com/article/this-new-flatpak-app-store-should-be-installed-by-default-on-every-linux-distro/" target="_blank">Visit this article</a>
 
         Oct 4, 2025: I wanted to build a simple text website last year.
-        But,I did not know about Mkdocs app (open source app)
-        So I build this text website with ChatGPT help
+        But, I did not know about Mkdocs app (open source app)
+        So I build this text base website with ChatGPT 
         <a href="https://www.xda-developers.com/i-made-basic-good-looking-site-in-markdown-with-static-site-generator//" target="_blank">Visit this author</a>
         <a href="https://youtu.be/DeZjkCtttss?si=JbOD3uqnRM65Lhzh" target="_blank">Visit this video</a>
         
-        oct 4, 2025: installing a new file manager (Yazi) 
-        With this app, you browse your files via a terminal (not GUI)
+        oct 4, 2025: installing a file manager (Yazi) 
+        File browsing within a terminal (not GUI)
         <a href="https://www.xda-developers.com/best-free-fast-file-manager-on-linux/" target="_blank">Visit this xda developer write-up</a>
 
 
-        Oct 2, 2025: iso image customeization tool
+        Oct 2, 2025: iso image customization tool
         <a href=" https://www.xda-developers.com/i-built-a-usb-image-with-everything-i-need-for-the-perfect-linux-setup/" target="_blank">Visit this video</a>
-       
-
-        Oct2, 2025: why you I care about LLM context length?
-        According to marktechpost.com, these LLM has 128K context length
-        Llama 3.1-8B, Phi4:3.8B, phi4 reasoning 14B, Gemma3
-        GPT-oss, both 120B and 20B version, has 128K context
-        128K context is needed for analyzing a big document
-        To analyze documents, you need 2 things that require 128K context
-        1. you need an LLM model that is 128K context
-        2. you need a nomic-embeded-text (2K)
-        3. but, 2K is too limited.
-        4. qwen3-embedding-text (40K) is much better
-        Gemma3 is good for chatting like ChatGPT 
-        But phi3:14B is best RAG (chatting with your document)
-        Gemma3 is not very good at RAG
-        Whatever, it takes too long.
-        imo, the best is Msty.app and ollama
-
+    
         Oct 2, 2025
-        New linux file explorer: Yazi (file manager for terminal user)
-
-        Oct 2, 2025
-        These are useful ubuntu extension (GNOME) for managing Windows
-        Advanced Alt Tab Windows Switcher (AATWS)
-        Auto Move Windows, Window On Top, Tiling Shell
-        Workspace Indicator (best one)
-        Pandoc (use simple command line) can convert markdown file (obsidian) into lovely document.
-
-
-        Sep 3, 2025: Gradia app: annotating screenshot app
-        Sep 2, 2025: How to install Windows-apps on Linux OS?
+        Pandoc is a file conversion app for obsidian
+        Gradia is an annotating screenshot app
+        How to install Windows-apps on Linux OS?
         Traditionally: you can install windows apps via Wine or Proton
         Now: WinBoat is a new way to install Windows apps on Linux OS
         <a href="https://www.zdnet.com/article/this-is-my-new-favorite-way-to-run-windows-apps-on-my-linux-pc-how-it-works/" target="_blank">Visit this guy's video</a>
 
-        Q: what is the difference between GPT4All and Newelle?
-        A: both of them is like ChatGPT but run locally
-        
-
-        x x  x x x x x x x x x x x x x x x 
-        Problem: Ollama installation error
-
-        curl -fsSL https://ollama.com/install.sh | sh
-        ollama --version
-        Warning: could not connect to a running Ollama instance
-        Warning: client version is 0.6.1
-        joy@linux:~$ ollama list
-        Error: could not connect to ollama app, is it running?
-        
-        Answer: type: ollama serve 
-
-        x  x x x x x  x x x x x x x x x x x x x
-        Problem: Error on Gemma3:27B AI model
-
-        ollama run hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M
-        Error: POST predict: Post "http://127.0.0.1:39643/completion": EOF
-
-        Answer: you need more than 36GB of RAM
-        This Error is misleading. It has nothing to do with webpage interface.
-        You need more RAM because 36GB RAM in my PC is not enough.
-        I can't add more RAM to my PC. So I use a smaller model (12b)
-        ollama run gemma3:12b-it-q4_K_M
-        This quantize version runs in most PC
-        36GB of RAM is successfull for gemma3:12b-it-q4_K_M
-
-        x  x x x x x x  x x x x x
-        News: Very Useful Linux Apps
-
-        This article is an absolute valuable.
-        Obsidian has AI plug in (great for local). 
-        For privacy, we need to run AI locally
-   
+        Local AI plug in for Obsidian
+        It takes 1-3 days for it to index 300 files. And the result is not very good.
         <a href="https://www.howtogeek.com/little-known-linux-apps-i-cant-live-without/" target="_blank">Visit HowToGeek</a>
 
-        News: Obsidian Note App 101
-        <a href="https://dev.to/proflead/obsidian-101-how-to-get-started-and-stay-organized-326b" target="_blank">Visit</a>
-        
-        x x x x x x x x x x x x  x x x x x x x x x x x  x x x x x x x x 
-        Problem: I Bricked my Steam Deck because of installing Dual Boot
-        
-        I installed Linux Mint Cinnamon OS along side of SteamOS.
-        I followed this video instruction and almost brick my Steam Deck.
-        <a href="https://youtu.be/zEpcBWX9K_o?si=XRPUbJhnGVN1BetV/" target="_blank">Visit this video</a>
-        Because installation failed, I tried to force Windows Manager out of BootManager.
-        Upon reboot, this SCARY message pop up: "fTPM data error. 
-        Select [No] to keep fTPM data and continue boot or
-        Select [Yes] to reset fTPM. 
-        If BitLocker or encryption is enabled, the system will not boot without a recovery key.
-        Yes or No"
-        Warning: don't click YES because you will brick your Steam Deck.
-        By default Windows 11 automatically sets Bitlocker and encryption enable. 
-        
-        My answer: boot to bios. In Menu/Advance/Peripheral, I disable fTPM (firmware TPM). 
-        When I rebooted, it did not show that scary error message again. 
-        But, from now on, Windows 11 can never be installed on this device because of no TPM.
-
-        Update: imo, if I replace the current ssd with the original ssd,
-        I should get back to the original state with no scary message pop up!
-        So, keep your original SSD in a safe place just in case you need it 
-        
-        x x  x x x x x x x x x x x x  x
-        How to choose a Linux Distro?
-        <a href="https://youtu.be/9C0rpRkk_oo?si=zWjhxt0ksDH071Xc" target="_blank">Visit this video</a>
-        <a href="https://librehunt.org/" target="_blank">Visit Libre Hunt</a>
-        <a href="https://distrochooser.de/" target="_blank">Visit Distro Chooser</a>
-
-        How to make Linux Mint Cinnamon Desktop look like Windows XP?
-        
-        Step 1: you drop a themed Windows-XP folder into ~/.theme
-        Step 2: you drop a Windows-XP-Cinnamon-Icon folder into ~/.icon
-        That is it. You are done. You now have a Window-XP desktop.
-        Click on the links below to download those 2 folders
-        <a href="https://youtu.be/q0pUt_e2CWI?si=Pyfo-mpsPwohjoGN" target="_blank">Visit KuleGuy on YouTube</a>
-        <a href="https://github.com/B00merang-Project/Windows-XP" target="_blank">Windows XP theme</a>
-        <a href="https://github.com/Rendellan/Windows-XP-Cinnamon-Icons" target="_blank">Windows XP Icons</a>
-        Why not using this Debian with Trinity Desktop that mimic Windows XP?
-        I feel that Debian does not have all the softwares installed like Ubunt/Mint
-        I would rather use Linux Mint and install a quick Windows XP theme
-        This way I have less trouble with installing apps like Ollama and Obsidian
-        <a href="https://youtu.be/n0kis4Q-VJg?si=CFNwdLK3sJvEBiG9" target="_blank">Visit this video</a>
-
-        x x x x x xx x
-        Hardware News:
-
-        Oct 2, 2025: this YouTuber builts a $1250 mini pc to run 120B parameter LLM
-        RAM: 96G, CPU: AMD Ryzen 9 AI HX 370
-        He got 1-5 token per second on gpt-oss LLM model
-        Sep 2, 2025: this entry is my personal opinion
-        I want to buy a brand new Linux computer, and it always over $1000
-        Now, I realized that a $350 Steam Deck is a Linux Mini PC.
-        I intent on running Ollama LLM on CPU only
-        So I don't need to deal with all the hardware technical stuffs
-        But, this mini pc build has the ability to use both GPU RAM and external RAM
-        I don't understand this part, but it seems like not all PC are equal
-        You just can't buy any 96GB RAM PC and expect to have this ability
-        
-         <a href="https://youtu.be/Cmsx01H-0xY?si=Mpk8DKE93GL5ABh3" target="_blank">Visit video</a>
-        
-        x x  x x x x x x x x x  x x x x x x x x x x x x x x
-        News: $2800 MaxSun Micro Station with Core Ultra 9
-        275HX, 256GB DDR5, two Arc Pro B60 GPU
-
-        <a href="https://videocardz.com/newz/maxsun-micro-station-with-core-ultra-9-275hx-256gb-ddr5-memory-and-two-arc-pro-b60-gpus-targets-price-under-2800" target="_blank">visit website</a>
-        
-        News: Acemagic F3A 128 GB RAM on Deepseek-R1 70b model
-        On reddit, people spots 1.8 t/s which is slow
-        It is about the same speed or worser than the $500 server below
-        But I think power consumption is a lot less and more expensive.
-        <a href="<a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>" target="_blank">Visit video</a>
-        
-        x x x  x x x x x x x x x x x x x x x x x x x 
-        News: Deepseek R1 671b Local AI Server ($500)
-        It is cheap, but it is eating a lot of power.
-        Wow, you can have a professional AI running locally.
-        
-        <a href="https://youtu.be/t_hh2-KG6Bw?si=CUf_MQWd6HBcN4wN" target="_blank">Visit video</a>
-        <a href="https://digitalspaceport.com/500-deepseek-r1-671b-local-ai-server/" target="_blank">Visit write up</a>
-
-        x x x x x x x x x x x x x x x x x  x x x x x x x 
-        News: Another budget way to run 70B model locally
-        
-        New GMKtek K10 mini PC 96G RAM may run 70B model
-        <a href="https://www.notebookcheck.net/GMKtec-K10-debuts-as-new-mini-PC-with-support-for-up-to-96-GB-RAM.966346.0.html" target="_blank">Vitsit Notebookcheck.net</a>
-        
-        x x  x x  x x x x x x x x x x x x x x  x x x x x x
-        News: Cheapest way to run 70B model using 136G RAM server
-        
-        HP Proliant Gen8 Server, 136G RAM, 2x2560v2 Xeons
-        I saw a comment on YouTube that show another setup that can run 70B model
-        He was able to run Deepseek R1 70B on old HP Proliant Gen8 server, no GPU
-        136G RAM, an 2x2560V2 xeons.
-        It took 1 hour to process a "tell me a story..." querry
-
-        x x  x x x  xx  x x x x x x x x x x x xx x x x  x x x
-        News: Another way to run 70B model locally using 128 GB RAM laptop
-        
-        Asus ROG Flow GZ301, 128 GB RAM laptop 
-        I am looking for a laptop with 128GB RAM to run LLM locally on CPU only
-        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1isxhoy/new_laptops_with_amd_chips_have_128_gb_unified/" target="_blank">Visit this Reddit Thread</a>
-        It is a new Asus ROG Flow GZ302, 128GB RAM ($2800)
-        Someone on Reddit mentioned that LLM model can't use the GPU on this laptop. 
-        LLM runs on CUDA which requires Nvidia card.
-        But I am fine with Ollama LLM run on CPU with 128GB of RAM without GPU
-        But it is a bit sad that LLM is not using this 96G VRAM (from GPU)
-
-        x x  x x x x  x x x x x x x x x x x x x x  x x  x x x x x x  x x x  x
-        News: Cheapest way to run 70B model locally using Dell R630 server ($200)
-        
-        Dell PowerEdge R630 96 GB RAM, 28 Core Xeon, can run 70B LLM on CPU without GPU
-        I asked ChatGPT how long will it take to run a 20-token-query?
-        96GB RAM might be too low unless the model is quantized (e.g., GGUF format, 4-bit/5-bit)
-        Without quantization, a 70B model may require 200GB+ RAM
-        If you manage to load a 4-bit quantized 70B model (like LLaMA 2 70B GGUF 4-bit):
-        Cold Start (Loading the model): 5–15 minutes (swapping might make it worse).
-        If you manage to load a 4-bit quantized 70B model on your Dell PowerEdge R630 
-        (96GB RAM, 28-core Xeon, no GPU), 
-        Here's an estimate for a 20-token query:
-        For 20 tokens, the CPU might take 100–400 seconds (1.5–6.5 minutes)
-        This sever will take about 400 Watt per hour of energy
-        (My laptop uses about 450 watt per day like 10 hours)
-        I will unplug as soon as Ollama finish giving the answer. 
-        For 15 minutes of use, it should cost about 100 Watt. 
-        (imo, this dell server could serve as a space heater during winter)
-        
-        x x x x x x x x x x  x x x x x x x
-        News: DIY $2000 PC Running Deepseek AI
-        
-        This guy built this PC to run Deepseek AI locally.
-        Usually only big guys like Google, Meta, OpenAI, and Microsoft have money to run big AI.
-        Now, even an average Joe with $2000 PC can run 671B AI locally (compatible with the real ChatGPT).
-        <a href="https://digitalspaceport.com/how-to-run-deepseek-r1-671b-fully-locally-on-2000-epyc-rig/" target="_blank">Visit this guy's write up</a>
-        <a href="https://youtu.be/Tq_cmN4j2yY?si=m5A_9EyB_vu9IXkp" target="_blank">Visit this guy's video</a>
-        
-        
     </code></pre>
     </div>
 
@@ -869,6 +663,53 @@ Model 7b is small enough to run in ram.
     </div>
 
   <div class="entry">
+        <h2>What to do if you see this error on steam deck?</h2>
+        <p>Scary pop up message upon booting Steam Deck
+    <pre><code>
+        x x x x x x x x x x x x  x x x x x x x x x x x  x x x x x x x x 
+        Problem: I Bricked my Steam Deck because of Dual Boot installation
+        
+        Upon reboot, this SCARY message pop up: "fTPM data error. 
+        Select [No] to keep fTPM data and continue boot or
+        Select [Yes] to reset fTPM. 
+        If BitLocker or encryption is enabled, the system will not boot without a recovery key.
+        Yes or No"
+        
+        What to do? don't click YES because you will brick your Steam Deck.
+        By default Windows 11 automatically sets Bitlocker and encryption enable. 
+        My answer: boot to bios. In Menu/Advance/Peripheral, I disable fTPM (firmware TPM). 
+        When I rebooted, it did not show that scary error message again. 
+
+        Update: imo, if I replace the current ssd with the original ssd,
+        I should get back to the original state with no scary message pop up!
+        So, keep your original SSD in a safe place just in case you need it 
+    </code></pre>
+</p>
+    </div>
+
+  <div class="entry">
+        <h2>How to install Windows XP theme on Linux Mint?</h2>
+        <p>Comment: I love the start menu
+    <pre><code>
+        How to make Linux Mint Cinnamon Desktop look like Windows XP?
+        
+        Step 1: you drop a themed Windows-XP folder into ~/.theme
+        Step 2: you drop a Windows-XP-Cinnamon-Icon folder into ~/.icon
+        That is it. You are done. You now have a Window-XP desktop.
+        Click on the links below to download those 2 folders
+        <a href="https://youtu.be/q0pUt_e2CWI?si=Pyfo-mpsPwohjoGN" target="_blank">Visit KuleGuy on YouTube</a>
+        <a href="https://github.com/B00merang-Project/Windows-XP" target="_blank">Windows XP theme</a>
+        <a href="https://github.com/Rendellan/Windows-XP-Cinnamon-Icons" target="_blank">Windows XP Icons</a>
+        
+        Why not using this Debian with Trinity Desktop that mimic Windows XP?
+        I feel that Debian does not have everything setup like Ubuntu/Linux Mint
+        I would rather use Linux Mint with Windows XP theme than Debian Trinity Desktop
+        <a href="https://youtu.be/n0kis4Q-VJg?si=CFNwdLK3sJvEBiG9" target="_blank">Visit this video</a>
+    </code></pre>
+</p>
+    </div>
+
+<div class="entry">
         <h2>How to?</h2>
         <p>Comment: 
     <pre><code>
@@ -878,7 +719,7 @@ Model 7b is small enough to run in ram.
 </p>
     </div>
 
-  <div class="entry">
+<div class="entry">
         <h2>How to?</h2>
         <p>Comment: 
     <pre><code>
